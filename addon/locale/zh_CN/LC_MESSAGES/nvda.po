@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 'OBJWatcher' '0.1'\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2023-08-25 15:28+0800\n"
-"PO-Revision-Date: 2023-08-25 15:29+0800\n"
+"POT-Creation-Date: 2023-08-25 20:26+0800\n"
+"PO-Revision-Date: 2023-08-25 20:28+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -17,24 +17,33 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.3.2\n"
 
-#: addon\globalPlugins\objWatcher\__init__.py:20
+#. Translators: The category name displayed in the input gesture dialog
+#: addon\globalPlugins\objWatcher\__init__.py:21
 msgid "objWatcher"
 msgstr "对象监视器"
 
-#. Translators: Input help message about start or stop watcher command in objWatcher.
-#: addon\globalPlugins\objWatcher\__init__.py:32
-msgid "Start or stop the navigation object watcher."
-msgstr "启动或停止对象监视"
+#. Translators: Input a help message in objWatcher about starting or stopping and reporting the currently watched attributes.
+#: addon\globalPlugins\objWatcher\__init__.py:33
+msgid ""
+"Press once to start watching the current navigator object. If a navigator "
+"object is currently being watched, the watched attribute will be reported. "
+"Press twice to stop watching."
+msgstr ""
+"按一次开始监视当前导航对象。如果当前已开始监视，则会读出被监视的对象属性。"
+"连按两次停止监视。"
 
-#: addon\globalPlugins\objWatcher\__init__.py:42
+#. Translators: Messages reported when watcher is stopped
+#: addon\globalPlugins\objWatcher\__init__.py:45
 msgid "Stopped watcher"
 msgstr "已停止监视"
 
-#: addon\globalPlugins\objWatcher\__init__.py:48
+#. Translators: Messages reported when watcher is start.
+#: addon\globalPlugins\objWatcher\__init__.py:55
 msgid "Started watcher {}"
 msgstr "已开始监视 {}"
 
-#: addon\globalPlugins\objWatcher\__init__.py:51
+#. Translators: Messages reported when No navigation object available to watch.
+#: addon\globalPlugins\objWatcher\__init__.py:59
 msgid "No navigation object available to watch"
 msgstr "没有可供监视的对象"
 
@@ -50,3 +59,6 @@ msgstr "对象监视器"
 #: buildVars.py:26
 msgid "An add-on for watch changes to attributes of nav objects."
 msgstr "用于监视导航对象属性变化的插件。"
+
+#~ msgid "Start or stop the navigation object watcher."
+#~ msgstr "启动或停止对象监视"

@@ -9,7 +9,7 @@ import gui
 import globalPluginHandler
 import ui
 import wx
-from scriptHandler import script
+from scriptHandler import script, getLastScriptRepeatCount
 from . import cues
 
 addonHandler.initTranslation()
@@ -17,6 +17,7 @@ addonHandler.initTranslation()
 WATCHER_TIMER_INTERVAL = 100  # milliseconds
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
+    # Translators: The category name displayed in the input gesture dialog
     scriptCategory = _("objWatcher")
 
     def __init__(self):
@@ -28,27 +29,34 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
     @script(
         description=_(
-            # Translators: Input help message about start or stop watcher command in objWatcher.
-            "Start or stop the navigation object watcher."
+            # Translators: Input a help message in objWatcher about starting or stopping and reporting the currently watched attributes.
+            "Press once to start watching the current navigator object. If a navigator object is currently being watched, the watched attribute will be reported. Press twice to stop watching."
         ),
         gesture="KB:NVDA+control+w"
     )
     def script_startOrStopWatcher(self, gesture):
         if not self.timer:
             return   
-        if self.timer.IsRunning():
-            self.timer.Stop()
-            cues.Stop()
-            ui.message(_("Stopped watcher"))
+        if getLastScriptRepeatCount() > 0:
+            if self.timer.IsRunning():
+                self.timer.Stop()
+                cues.Stop()
+                # Translators: Messages reported when watcher is stopped
+                ui.message(_("Stopped watcher"))
         else:
-            self.watchingObj = api.getNavigatorObject()     
-            self.timer.Start(WATCHER_TIMER_INTERVAL)
-            if self.watchingObj:
-                cues.Start()
-                ui.message(_("Started watcher {}").format(self._getWatchingAttribute()))
+            if self.timer.IsRunning():
+                ui.message(self._getWatchingAttribute())
             else:
-                cues.NoObj()
-                ui.message(_("No navigation object available to watch"))
+                self.watchingObj = api.getNavigatorObject()     
+                self.timer.Start(WATCHER_TIMER_INTERVAL)
+                if self.watchingObj:
+                    cues.Start()
+                    # Translators: Messages reported when watcher is start.
+                    ui.message(_("Started watcher {}").format(self._getWatchingAttribute()))
+                else:
+                    cues.NoObj()
+                    # Translators: Messages reported when No navigation object available to watch.
+                    ui.message(_("No navigation object available to watch"))
 
     def onTimerEvent(self, event):
         if not self.watchingObj:
