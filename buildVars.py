@@ -23,9 +23,9 @@ addon_info = {
 	"addon_summary": _("obj Watcher"),
 	# Add-on description
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-	"addon_description": _("""An add-on for watch changes to attributes of nav objects."""),
+	"addon_description": _("""This NVDA add-on watches changes to attributes of navigation objects."""),
 	# version
-	"addon_version": "0.1.0",
+	"addon_version": "0.2.0",
 	# Author(s)
 	"addon_author": "Cary-rowen <manchen_0528@outlook.com>",
 	# URL for the add-on documentation support
