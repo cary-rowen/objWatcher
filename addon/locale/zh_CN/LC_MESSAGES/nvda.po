@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 'OBJWatcher' '0.1'\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2023-08-25 20:26+0800\n"
-"PO-Revision-Date: 2023-08-25 20:28+0800\n"
+"POT-Creation-Date: 2023-08-25 21:24+0800\n"
+"PO-Revision-Date: 2023-08-25 21:26+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -57,8 +57,8 @@ msgstr "对象监视器"
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 #: buildVars.py:26
-msgid "An add-on for watch changes to attributes of nav objects."
-msgstr "用于监视导航对象属性变化的插件。"
+msgid "This NVDA add-on watches changes to attributes of navigation objects."
+msgstr "这是一个用于监视导航对象属性变化的插件。"
 
 #~ msgid "Start or stop the navigation object watcher."
 #~ msgstr "启动或停止对象监视"

@@ -1,6 +1,9 @@
 # obj Watcher
 
-An add-on for watch changes to attributes of nav objects.
+**This NVDA add-on watches changes to attributes of navigation objects.**
+
+* Author: Cary-rowen <manchen_0528@outlook.com>
+* Compatibility: NVDA-2023.1 or later
 
 ## Gestures
 
