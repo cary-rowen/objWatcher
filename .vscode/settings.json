@@ -21,5 +21,9 @@
         "../nvda/source",
         "../nvda/miscDeps/python"
     ],
-    "python.defaultInterpreterPath": "../nvda/.venv/scripts/python.exe"
+	"python.defaultInterpreterPath": "../nvda/.venv/scripts/python.exe",
+	"[python]": {
+		"editor.defaultFormatter": "ms-python.autopep8"
+	},
+	"python.formatting.provider": "none"
 }
