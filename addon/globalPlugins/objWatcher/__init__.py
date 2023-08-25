@@ -2,13 +2,12 @@
 # This file is covered by the GNU General Public License.
 # See the file COPYING.txt for more details.
 # Copyright (C) 2023 Cary-rowen <manchen_0528@outlook.com>
-
-import api
-import addonHandler
-import gui
-import globalPluginHandler
-import ui
 import wx
+import api
+import ui
+import gui
+import addonHandler
+import globalPluginHandler
 from scriptHandler import script, getLastScriptRepeatCount
 from . import cues
 
@@ -25,7 +24,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
         self.watchingObj = None
         self.lastAttributeText = None
         self.timer = wx.Timer(gui.mainFrame)
-        gui.mainFrame.Bind(wx.EVT_TIMER, self.onTimerEvent, self.timer)
+        gui.mainFrame.Bind(wx.EVT_TIMER, handler=self.onTimerEvent, source=self.timer)
 
     @script(
         description=_(
@@ -37,26 +36,32 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
     def script_startOrStopWatcher(self, gesture):
         if not self.timer:
             return   
-        if getLastScriptRepeatCount() > 0:
-            if self.timer.IsRunning():
-                self.timer.Stop()
-                cues.Stop()
-                # Translators: Messages reported when watcher is stopped
-                ui.message(_("Stopped watcher"))
+        repeatCount = getLastScriptRepeatCount()
+        if repeatCount > 0:
+            self._toggleWatcher()
         else:
             if self.timer.IsRunning():
                 ui.message(self._getWatchingAttribute())
             else:
-                self.watchingObj = api.getNavigatorObject()     
-                self.timer.Start(WATCHER_TIMER_INTERVAL)
-                if self.watchingObj:
-                    cues.Start()
-                    # Translators: Messages reported when watcher is start.
-                    ui.message(_("Started watcher {}").format(self._getWatchingAttribute()))
-                else:
-                    cues.NoObj()
-                    # Translators: Messages reported when No navigation object available to watch.
-                    ui.message(_("No navigation object available to watch"))
+                self._toggleWatcher()
+
+    def _toggleWatcher(self):
+        if self.timer.IsRunning():
+            self.timer.Stop()
+            cues.Stop()
+            # Translators: Messages reported when watcher is stopped
+            ui.message(_("Stopped watcher"))
+        else:
+            self.watchingObj = api.getNavigatorObject()
+            self.timer.Start(WATCHER_TIMER_INTERVAL)
+            if self.watchingObj:
+                cues.Start()
+                # Translators: Messages reported when watcher is started.
+                ui.message(_("Started watcher {}").format(self._getWatchingAttribute()))
+            else:
+                cues.NoObj()
+                # Translators: Messages reported when no navigation object available to watch.
+                ui.message(_("No navigation object available to watch"))
 
     def onTimerEvent(self, event):
         if not self.watchingObj:
@@ -72,7 +77,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
         seen_values = set()   
         for attr in ['name', 'value', 'description']:
             if hasattr(self.watchingObj, attr):
-                value = getattr(self.watchingObj, attr)
+                value = getattr(self.watchingObj, attr, None)
                 if value and value not in seen_values:
                     non_empty_attributes.append(value)
                     seen_values.add(value)    
@@ -83,6 +88,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
         super().terminate()
         if self.timer:
             self.timer.Stop()
+            self.timer.Destroy()
             self.lastAttributeText = None
             self.timer = None
             self.watchingObj = None
