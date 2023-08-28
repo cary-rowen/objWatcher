@@ -43,6 +43,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			return
 		repeatCount = getLastScriptRepeatCount()
 		if repeatCount > 0:
+			if not self.timer.IsRunning():
+				return
 			self._toggleWatcher()
 		else:
 			if self.timer.IsRunning():
@@ -95,6 +97,3 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if self.timer:
 			self.timer.Stop()
 			self.timer.Destroy()
-			self.lastAttributeText = None
-			self.timer = None
-			self.watchingObj = None
