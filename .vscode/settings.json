@@ -2,6 +2,7 @@
     "editor.accessibilitySupport": "on",
     "python.linting.enabled": true,
     "python.linting.maxNumberOfProblems": 10000,
+    "flake8.importStrategy": "fromEnvironment",
     "python.linting.flake8Args": [
         "--config=flake8.ini"
     ],
