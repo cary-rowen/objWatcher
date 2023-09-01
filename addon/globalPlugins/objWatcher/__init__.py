@@ -24,6 +24,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		super().__init__()
 		self.watchingObj = None
 		self.lastAttributeText = None
+		# self.callLater will be assigned the value wx.CallLater(510, _toggleWatcher), used to stop calling the function when the gesture presse twice.
+		# Borrowed from Luke's Version collector addon. Thanks Luke
+		self.callLater= None
 		self.timer = wx.Timer(gui.mainFrame)
 		gui.mainFrame.Bind(
 			wx.EVT_TIMER, handler=self.onTimerEvent, source=self.timer)
@@ -43,6 +46,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			return
 		repeatCount = getLastScriptRepeatCount()
 		if repeatCount > 0:
+			# stop the effects of first press.
+			if self.callLater.IsRunning():
+				self.callLater.Stop()
 			if not self.timer.IsRunning():
 				return
 			self._toggleWatcher()
@@ -50,7 +56,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			if self.timer.IsRunning():
 				ui.message(self._getWatchingAttribute())
 			else:
-				self._toggleWatcher()
+				self.callLater= wx.CallLater(510, self._toggleWatcher) if not self.callLater else self.callLater
+				# call after 510 ms, and we will stop it if gesture press twice.
+				self.callLater.Start(510)
 
 	def _toggleWatcher(self):
 		if self.timer.IsRunning():
@@ -60,8 +68,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			ui.message(_("Stopped watcher"))
 		else:
 			self.watchingObj = api.getNavigatorObject()
-			self.timer.Start(WATCHER_TIMER_INTERVAL)
 			if self.watchingObj:
+				self.timer.Start(WATCHER_TIMER_INTERVAL)
 				cues.Start()
 				# Translators: Messages reported when watcher is started.
 				ui.message(_("Started watcher {}").format(
