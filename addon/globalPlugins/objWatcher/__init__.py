@@ -2,13 +2,14 @@
 # This file is covered by the GNU General Public License.
 # See the file COPYING.txt for more details.
 # Copyright (C) 2023 Cary-rowen <manchen_0528@outlook.com>
-import wx
-import api
-import ui
-import gui
 import addonHandler
+import api
 import globalPluginHandler
-from scriptHandler import script, getLastScriptRepeatCount
+import gui
+import ui
+import wx
+from scriptHandler import getLastScriptRepeatCount, script
+
 from . import cues
 
 addonHandler.initTranslation()
