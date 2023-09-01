@@ -16,9 +16,18 @@
 
 **如果需要，可以从“按键与手势”对话框更改此快捷键。**
 
-## 贡献
+## 贡献者
+* Cary-rowen
+* ibrahim hamadeh
+
+## 贡献方式
 1. 该插件在 [GitHub][GitHub] 上接受新功能和本地化翻译的 PR。
 2. 有任何反馈，也可以通过 [GitHub Issue][GitHubIssue] 进行提交。
+
+## 升级日志
+### 版本0.3.4
+* 连按两次首饰不再始终优先执行第一次按下功能。
+* 改进了文档
 
 [GitHub]: https://github.com/cary-rowen/objWatcher
 [GitHubIssue]: https://github.com/cary-rowen/objWatcher/issues

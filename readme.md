@@ -16,9 +16,18 @@
 
 **You can change this gesture from the Input Gestures dialog.**
 
-## Contribution
-1. The add-on accepts PRs for new features and localized translations on [GitHub][GitHub].
-2. Any feedback, please also submit it through a [GitHub Issue][GitHubIssue].
+## Contributors
+* Cary-rowen
+* ibrahim hamadeh
+
+## Contribution Guidelines
+1. The add-on welcomes Pull Requests (PRs) for new features and localized translations on [GitHub][GitHub].
+2. For any feedback, please submit it through a [GitHub Issue][GitHubIssue].
+
+## Release Notes
+### Version 0.3.4
+* Enhanced documentation.
+* The rapid double press gesture no longer consistently prioritizes the execution of the first press function.
 
 [GitHub]: https://github.com/cary-rowen/objWatcher
 [GitHubIssue]: https://github.com/cary-rowen/objWatcher/issues
