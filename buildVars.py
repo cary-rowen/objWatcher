@@ -27,7 +27,7 @@ addon_info = {
 	# version
 	"addon_version": "0.3.4",
 	# Author(s)
-	"addon_author": "Cary-rowen <manchen_0528@outlook.com>",
+	"addon_author": "Cary-rowen <manchen_0528@outlook.com>, hwf1324 <1398969445@qq.com>",
 	# URL for the add-on documentation support
 	"addon_url": "https://www.nvdacn.com/",
 	# URL for the add-on repository where the source code can be found
