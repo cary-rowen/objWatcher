@@ -2,8 +2,11 @@
 # This file is covered by the GNU General Public License.
 # See the file COPYING.txt for more details.
 # Copyright (C) 2023 Cary-rowen <manchen_0528@outlook.com>
+# Copyright (C) 2023 hwf1324 <1398969445@qq.com>
+
 import addonHandler
 import api
+import config
 import globalPluginHandler
 import gui
 import ui
@@ -11,10 +14,13 @@ import wx
 from scriptHandler import getLastScriptRepeatCount, script
 
 from . import cues
+from . import settings
 
 addonHandler.initTranslation()
 
 WATCHER_TIMER_INTERVAL = 100  # milliseconds
+
+interval = WATCHER_TIMER_INTERVAL
 
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
@@ -23,6 +29,16 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
 		super().__init__()
+		if "objWatcher" in config.conf:
+			if "interval" in config.conf["objWatcher"]:
+				global interval
+				interval = config.conf["objWatcher"]["interval"]
+			else:
+				config.conf["objWatcher"]["interval"] = WATCHER_TIMER_INTERVAL
+		else:
+			config.conf["objWatcher"] = dict()
+			config.conf["objWatcher"]["interval"] = WATCHER_TIMER_INTERVAL
+
 		self.watchingObj = None
 		self.lastAttributeText = None
 		# self.callLater will be assigned the value wx.CallLater(510,
@@ -32,6 +48,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.timer = wx.Timer(gui.mainFrame)
 		gui.mainFrame.Bind(
 			wx.EVT_TIMER, handler=self.onTimerEvent, source=self.timer)
+		gui.settingsDialogs.NVDASettingsDialog.categoryClasses.append(settings.ObjWatcherPanel)
 
 	@script(
 		description=_(
@@ -71,7 +88,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		else:
 			self.watchingObj = api.getNavigatorObject()
 			if self.watchingObj:
-				self.timer.Start(WATCHER_TIMER_INTERVAL)
+				self.timer.Start(interval)
 				cues.Start()
 				# Translators: Messages reported when watcher is started.
 				ui.message(_("Started watcher {}").format(
@@ -107,3 +124,4 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if self.timer:
 			self.timer.Stop()
 			self.timer.Destroy()
+		gui.settingsDialogs.NVDASettingsDialog.categoryClasses.remove(settings.ObjWatcherPanel)
