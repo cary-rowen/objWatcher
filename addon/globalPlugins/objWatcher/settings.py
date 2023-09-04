@@ -3,11 +3,13 @@
 # See the file COPYING.txt for more details.
 # Copyright (C) 2023 hwf1324 <1398969445@qq.com>
 
+import addonHandler
 import config
 import gui
 from gui import guiHelper
 from gui import nvdaControls
 
+addonHandler.initTranslation()
 
 class ObjWatcherPanel(gui.settingsDialogs.SettingsPanel):
 	# Translators: This is the label for the ObjWatcher settings panel.

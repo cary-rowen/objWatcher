@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 'OBJWatcher' '0.1'\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2023-09-04 02:55+0800\n"
-"PO-Revision-Date: 2023-09-04 03:00+0800\n"
+"POT-Creation-Date: 2023-09-05 06:04+0800\n"
+"PO-Revision-Date: 2023-09-05 06:05+0800\n"
 "Last-Translator: hwf1324 <1398969445@qq.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -18,13 +18,13 @@ msgstr ""
 "X-Generator: Poedit 3.3.2\n"
 
 #. Translators: The category name displayed in the input gesture dialog
-#: addon\globalPlugins\objWatcher\__init__.py:26
+#: addon\globalPlugins\objWatcher\__init__.py:28
 msgid "objWatcher"
 msgstr "对象监视器"
 
 #. Translators: Input a help message in objWatcher about
 #. starting or stopping and reporting the currently watched attributes.
-#: addon\globalPlugins\objWatcher\__init__.py:48
+#: addon\globalPlugins\objWatcher\__init__.py:57
 msgid ""
 "Press once to start watching the current navigator object. If a navigator "
 "object is currently being watched, the watched attribute will be reported. "
@@ -34,28 +34,28 @@ msgstr ""
 "连按两次停止监视。"
 
 #. Translators: Messages reported when watcher is stopped
-#: addon\globalPlugins\objWatcher\__init__.py:78
+#: addon\globalPlugins\objWatcher\__init__.py:87
 msgid "Stopped watcher"
 msgstr "已停止监视"
 
 #. Translators: Messages reported when watcher is started.
-#: addon\globalPlugins\objWatcher\__init__.py:85
+#: addon\globalPlugins\objWatcher\__init__.py:94
 msgid "Started watcher {}"
 msgstr "已开始监视 {}"
 
 #. Translators: Messages reported when no navigation object available to watch.
-#: addon\globalPlugins\objWatcher\__init__.py:90
+#: addon\globalPlugins\objWatcher\__init__.py:99
 msgid "No navigation object available to watch"
 msgstr "没有可供监视的对象"
 
 #. Translators: This is the label for the ObjWatcher settings panel.
 #: addon\globalPlugins\objWatcher\settings.py:14
-#, fuzzy
-#| msgid "objWatcher"
 msgid "ObjWatcher"
 msgstr "对象监视器"
 
-#: addon\globalPlugins\objWatcher\settings.py:18
+#. Translators: This is the label of a SpinCtrl in the ObjWatcher settings panel
+#. This option controls the interval of the Watcher timer (in milliseconds)
+#: addon\globalPlugins\objWatcher\settings.py:20
 msgid "Watcher timer interval"
 msgstr "监视对象周期（毫秒）"
 
