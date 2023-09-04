@@ -5,8 +5,8 @@
 
 import config
 import gui
-import wx
 from gui import guiHelper
+from gui import nvdaControls
 
 
 class ObjWatcherPanel(gui.settingsDialogs.SettingsPanel):
@@ -17,10 +17,14 @@ class ObjWatcherPanel(gui.settingsDialogs.SettingsPanel):
 		settingsSizerHelper = guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
 		# Translators: This is the label of a SpinCtrl in the ObjWatcher settings panel
 		# This option controls the interval of the Watcher timer (in milliseconds)
-		intervalSpinCtrlLabel = _("Watcher timer interval")
-		self.intervalSpinCtrl = settingsSizerHelper.addLabeledControl(intervalSpinCtrlLabel, wx.SpinCtrl)
-		self.intervalSpinCtrl.SetValue(config.conf["objWatcher"]["interval"])
+		intervalLabelText = _("Watcher timer interval")
+		self.intervalEdit = settingsSizerHelper.addLabeledControl(
+			intervalLabelText,
+			nvdaControls.SelectOnFocusSpinCtrl,
+			initial=int(config.conf["objWatcher"]["interval"])
+		)
 
 	def onSave(self):
+		config.conf["objWatcher"]["interval"] = self.intervalEdit.Value
 		global interval
-		interval = config.conf["objWatcher"]["interval"] = self.intervalSpinCtrl.GetValue()
+		interval = int(config.conf["objWatcher"]["interval"])

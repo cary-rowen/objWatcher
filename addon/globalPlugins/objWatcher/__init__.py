@@ -20,7 +20,7 @@ addonHandler.initTranslation()
 
 WATCHER_TIMER_INTERVAL = 100  # milliseconds
 
-interval = WATCHER_TIMER_INTERVAL
+interval: int = WATCHER_TIMER_INTERVAL
 
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
@@ -32,7 +32,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if "objWatcher" in config.conf:
 			if "interval" in config.conf["objWatcher"]:
 				global interval
-				interval = config.conf["objWatcher"]["interval"]
+				interval = int(config.conf["objWatcher"]["interval"])
 			else:
 				config.conf["objWatcher"]["interval"] = WATCHER_TIMER_INTERVAL
 		else:
