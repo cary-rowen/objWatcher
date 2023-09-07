@@ -18,9 +18,10 @@ from . import settings
 
 addonHandler.initTranslation()
 
-WATCHER_TIMER_INTERVAL = 100  # milliseconds
-
-interval: int = WATCHER_TIMER_INTERVAL
+confspec = {
+	"interval": "integer(default=100)"
+}
+config.conf.spec["objWatcher"] = confspec
 
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
@@ -29,16 +30,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
 		super().__init__()
-		if "objWatcher" in config.conf:
-			if "interval" in config.conf["objWatcher"]:
-				global interval
-				interval = int(config.conf["objWatcher"]["interval"])
-			else:
-				config.conf["objWatcher"]["interval"] = WATCHER_TIMER_INTERVAL
-		else:
-			config.conf["objWatcher"] = dict()
-			config.conf["objWatcher"]["interval"] = WATCHER_TIMER_INTERVAL
-
 		self.watchingObj = None
 		self.lastAttributeText = None
 		# self.callLater will be assigned the value wx.CallLater(510,
@@ -88,7 +79,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		else:
 			self.watchingObj = api.getNavigatorObject()
 			if self.watchingObj:
-				self.timer.Start(interval)
+				self.timer.Start(config.conf["objWatcher"]["interval"])
 				cues.Start()
 				# Translators: Messages reported when watcher is started.
 				ui.message(_("Started watcher {}").format(

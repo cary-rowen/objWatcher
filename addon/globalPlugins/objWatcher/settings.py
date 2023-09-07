@@ -11,6 +11,7 @@ from gui import nvdaControls
 
 addonHandler.initTranslation()
 
+
 class ObjWatcherPanel(gui.settingsDialogs.SettingsPanel):
 	# Translators: This is the label for the ObjWatcher settings panel.
 	title = _("ObjWatcher")
@@ -23,10 +24,9 @@ class ObjWatcherPanel(gui.settingsDialogs.SettingsPanel):
 		self.intervalEdit = settingsSizerHelper.addLabeledControl(
 			intervalLabelText,
 			nvdaControls.SelectOnFocusSpinCtrl,
+			min=10, max=500,
 			initial=int(config.conf["objWatcher"]["interval"])
 		)
 
 	def onSave(self):
 		config.conf["objWatcher"]["interval"] = self.intervalEdit.Value
-		global interval
-		interval = int(config.conf["objWatcher"]["interval"])
