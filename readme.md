@@ -29,8 +29,11 @@
 2. For any feedback, please submit it through a [GitHub Issue][GitHubIssue].
 
 ## Release Notes
+### Version 0.4.1
+* Added Arabic translation by ibrahim hamadeh.
+
 ### Version 0.4.0
-* The watcher timer interval can be set in the settings panel, the default value is 100.
+*The watcher timer interval can be set in the settings panel, the default value is 100.
 
 ### Version 0.3.4
 * Enhanced documentation.
