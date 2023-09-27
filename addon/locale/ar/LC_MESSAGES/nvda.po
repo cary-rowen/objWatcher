@@ -1,0 +1,77 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 'objWatcher' '0.3.4'\n"
+"Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
+"POT-Creation-Date: 2023-09-27 00:24+0300\n"
+"PO-Revision-Date: 2023-09-27 03:10+0300\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: \n"
+"Language-Team: Arabic\n"
+"X-Generator: Poedit 2.0.7\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n"
+"%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+
+#. Translators: The category name displayed in the input gesture dialog
+#: addon\globalPlugins\objWatcher\__init__.py:29
+msgid "objWatcher"
+msgstr "مُراقِب الكائنات"
+
+#. Translators: Input a help message in objWatcher about
+#. starting or stopping and reporting the currently watched attributes.
+#: addon\globalPlugins\objWatcher\__init__.py:48
+msgid ""
+"Press once to start watching the current navigator object. If a navigator "
+"object is currently being watched, the watched attribute will be reported. "
+"Press twice to stop watching."
+msgstr ""
+"إضغط الإختصار مرة واحدة لِتبدأ مُراقبةْ الكائن. و إذا كانت المُراقبة قد بدأت "
+"مِن قبل, فسيتم الإعلان عن حالةْ الكائن. إضغط الإختصار مرتين مُتتاليتين لإيقاف "
+"المُراقبة."
+
+#. Translators: Messages reported when watcher is stopped
+#: addon\globalPlugins\objWatcher\__init__.py:78
+msgid "Stopped watcher"
+msgstr "إيقاف المُراقبة"
+
+#. Translators: Messages reported when watcher is started.
+#: addon\globalPlugins\objWatcher\__init__.py:85
+msgid "Started watcher {}"
+msgstr "بدء مراقبةْ {}"
+
+#. Translators: Messages reported when no navigation object available to watch.
+#: addon\globalPlugins\objWatcher\__init__.py:90
+msgid "No navigation object available to watch"
+msgstr "لا يتوفر كائن تَصَفُّح لِمراقبته"
+
+#. Translators: This is the label for the ObjWatcher settings panel.
+#: addon\globalPlugins\objWatcher\settings.py:17
+msgid "ObjWatcher"
+msgstr "مُراقبةْ الكائنات"
+
+#. Translators: This is the label of a SpinCtrl in the ObjWatcher settings panel
+#. This option controls the interval of the Watcher timer (in milliseconds)
+#: addon\globalPlugins\objWatcher\settings.py:23
+msgid "Watcher timer interval"
+msgstr "الوقت الذي يتكرر عنده مراقبةْ الكائن"
+
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on
+#. to be shown on installation and add-on information found in Add-ons Manager.
+#: buildVars.py:23
+msgid "obj Watcher"
+msgstr "مراقبةْ الكائنات"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+#: buildVars.py:26
+msgid "This NVDA add-on watches changes to attributes of navigation objects."
+msgstr "تراقب هذه الإضافة لـ NVDA التغييرات التي تطرأ على خصائص كائن التصفح."
