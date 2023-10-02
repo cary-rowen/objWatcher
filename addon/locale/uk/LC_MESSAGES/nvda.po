@@ -1,0 +1,72 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
+"POT-Creation-Date: 2023-09-27 09:47+0300\n"
+"PO-Revision-Date: 2023-10-01 13:03+0300\n"
+"Last-Translator: Heorhii <nvda.translation.uk@gmail.com>\n"
+"Language-Team: \n"
+"Language: uk_UA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.3.2\n"
+"X-Poedit-Basepath: .\n"
+
+#. Translators: The category name displayed in the input gesture dialog
+#: addon\globalPlugins\objWatcher\__init__.py:29
+msgid "objWatcher"
+msgstr "спостерігач за об’єктами"
+
+#. Translators: Input a help message in objWatcher about
+#. starting or stopping and reporting the currently watched attributes.
+#: addon\globalPlugins\objWatcher\__init__.py:48
+msgid ""
+"Press once to start watching the current navigator object. If a navigator "
+"object is currently being watched, the watched attribute will be reported. "
+"Press twice to stop watching."
+msgstr ""
+"Натисніть один раз, щоб почати спостереження за поточним об’єкта "
+"навігатора. Якщо об’єкт навігатора в цей час спостерігається, буде "
+"повідомлено про спостережуваний атрибут. Натисніть двічі, щоб припинити "
+"спостереження."
+
+#. Translators: Messages reported when watcher is stopped
+#: addon\globalPlugins\objWatcher\__init__.py:78
+msgid "Stopped watcher"
+msgstr "Спостереження зупинено"
+
+#. Translators: Messages reported when watcher is started.
+#: addon\globalPlugins\objWatcher\__init__.py:85
+msgid "Started watcher {}"
+msgstr "Спостереження розпочато {}"
+
+#. Translators: Messages reported when no navigation object available to watch.
+#: addon\globalPlugins\objWatcher\__init__.py:90
+msgid "No navigation object available to watch"
+msgstr "Немає об’єктів навігації, доступних для перегляду"
+
+#. Translators: This is the label for the ObjWatcher settings panel.
+#: addon\globalPlugins\objWatcher\settings.py:17
+msgid "ObjWatcher"
+msgstr "Спостерігач за об’єктами"
+
+#. Translators: This is the label of a SpinCtrl in the ObjWatcher settings panel
+#. This option controls the interval of the Watcher timer (in milliseconds)
+#: addon\globalPlugins\objWatcher\settings.py:23
+msgid "Watcher timer interval"
+msgstr "Інтервал таймера спостерігача"
+
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on
+#. to be shown on installation and add-on information found in Add-ons Manager.
+#: buildVars.py:23
+msgid "obj Watcher"
+msgstr "спостерігач за об’єктами"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+#: buildVars.py:26
+msgid "This NVDA add-on watches changes to attributes of navigation objects."
+msgstr ""
+"Цей додаток для NVDA стежить за змінами в атрибутах об’єктів навігації."
