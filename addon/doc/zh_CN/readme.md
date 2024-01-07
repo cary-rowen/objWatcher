@@ -23,12 +23,15 @@
 * ibrahim hamadeh
 * hwf1324
 
-## 贡献方式
+## 贡献
 
 1. 该插件在 [GitHub][GitHub] 上接受新功能和本地化翻译的 PR。
 2. 有任何反馈，也可以通过 [GitHub Issue][GitHubIssue] 进行提交。
 
 ## 升级日志
+### 版本0.4.2
+* 由 VovaMobile 增加的乌克兰语翻译。
+
 ### 版本0.4.1
 * 由 ibrahim hamadeh 增加的阿拉伯语翻译。
 

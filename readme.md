@@ -23,12 +23,15 @@
 * ibrahim hamadeh
 * hwf1324
 
-## Contribution Guidelines
+## Contribution
 
 1. The add-on welcomes Pull Requests (PRs) for new features and localized translations on [GitHub][GitHub].
 2. For any feedback, please submit it through a [GitHub Issue][GitHubIssue].
 
 ## Release Notes
+### Version 0.4.2
+* Added Ukrainian translation by VovaMobile.
+
 ### Version 0.4.1
 * Added Arabic translation by ibrahim hamadeh.
 
