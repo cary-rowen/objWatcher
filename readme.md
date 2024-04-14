@@ -29,6 +29,9 @@
 2. For any feedback, please submit it through a [GitHub Issue][GitHubIssue].
 
 ## Release Notes
+### Version 0.4.4
+* Supported speak on demand mode on NVDA2024.1.
+
 ### Version 0.4.3
 * Compatible with NVDA2024.1
 
