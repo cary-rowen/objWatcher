@@ -11,10 +11,13 @@ import globalPluginHandler
 import gui
 import ui
 import wx
+import versionInfo
 from scriptHandler import getLastScriptRepeatCount, script
 
 from . import cues
 from . import settings
+
+speakOnDemand = {"speakOnDemand": True} if versionInfo.version_year >= 2024 else {}
 
 addonHandler.initTranslation()
 
@@ -49,7 +52,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			"If a navigator object is currently being watched, the watched attribute will be reported. " \
 			"Press twice to stop watching."
 		),
-		gesture="KB:NVDA+control+w"
+		gesture="KB:NVDA+control+w",
+		**speakOnDemand
 	)
 	def script_startOrStopWatcher(self, gesture):
 		if not self.timer:
