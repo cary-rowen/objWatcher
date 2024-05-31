@@ -1,0 +1,70 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the objWatcher package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: objWatcher 0.4.3\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
+"POT-Creation-Date: 2024-05-18 10:34+0000\n"
+"PO-Revision-Date: 2024-05-24 22:19+0100\n"
+"Last-Translator: Ângelo Abrantes <ampa4374@gmail.com>\n"
+"Language-Team: Equipa portuguesa do NVDA: Ângelo Abrantes e Rui Fontes "
+"(23-05-2024)\n"
+"Language: pt_PT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#. Translators: The category name displayed in the input gesture dialog
+msgid "objWatcher"
+msgstr "objWatcher"
+
+#. Translators: Input a help message in objWatcher about
+#. starting or stopping and reporting the currently watched attributes.
+msgid ""
+"Press once to start watching the current navigator object. If a navigator "
+"object is currently being watched, the watched attribute will be reported. "
+"Press twice to stop watching."
+msgstr ""
+"Prima uma vez para começar a observar o objeto do navegador atual. Se um "
+"objeto do navegador estiver a ser observado, o atributo observado será "
+"indicado. Prima duas vezes para parar a observação."
+
+#. Translators: Messages reported when watcher is stopped
+msgid "Stopped watcher"
+msgstr "Observador parado"
+
+#. Translators: Messages reported when watcher is started.
+msgid "Started watcher {}"
+msgstr "visualizador iniciado {}"
+
+#. Translators: Messages reported when no navigation object available to watch.
+msgid "No navigation object available to watch"
+msgstr "Nenhum objeto de navegação disponível para ver"
+
+#. Translators: This is the label for the ObjWatcher settings panel.
+msgid "ObjWatcher"
+msgstr "ObjWatcher"
+
+#. Translators: This is the label of a SpinCtrl in the ObjWatcher settings panel
+#. This option controls the interval of the Watcher timer (in milliseconds)
+msgid "Watcher timer interval"
+msgstr "Intervalo de tempo do visualizador"
+
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on
+#. to be shown on installation and add-on information found in Add-ons Manager.
+msgid "obj Watcher"
+msgstr "Visualizador de obj"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+msgid "This NVDA add-on watches changes to attributes of navigation objects."
+msgstr ""
+"Este extra do NVDA observa as alterações aos atributos dos objectos de "
+"navegação."
