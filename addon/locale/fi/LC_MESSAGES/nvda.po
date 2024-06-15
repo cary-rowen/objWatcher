@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: objWatcher 0.4.3\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2024-05-18 10:34+0000\n"
-"PO-Revision-Date: 2024-05-25 17:14+0300\n"
+"PO-Revision-Date: 2024-06-02 14:56+0300\n"
 "Last-Translator: Jani Kinnunen <janikinnunen340@gmail.com>\n"
 "Language-Team: \n"
 "Language: fi\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #. Translators: The category name displayed in the input gesture dialog
 msgid "objWatcher"
-msgstr "Objektivahti"
+msgstr "Objektien tarkkailija"
 
 #. Translators: Input a help message in objWatcher about
 #. starting or stopping and reporting the currently watched attributes.
@@ -29,38 +29,38 @@ msgid ""
 "object is currently being watched, the watched attribute will be reported. "
 "Press twice to stop watching."
 msgstr ""
-"Paina kerran aloittaaksesi nykyisen navigointiobjektin vahtimisen. Mikäli "
-"navigointiobjektin vahtiminen on jo käytössä, vahdittava määre puhutaan. "
-"Paina kahdesti lopettaaksesi vahtimisen."
+"Aloita nykyisen navigointiobjektin tarkkailu painamalla kerran. Mikäli "
+"navigointiobjektin tarkkailu on jo käytössä, tarkkailtava määre puhutaan. "
+"Lopeta tarkkailu painamalla kahdesti."
 
 #. Translators: Messages reported when watcher is stopped
 msgid "Stopped watcher"
-msgstr "Vahti pysäytetty"
+msgstr "Tarkkailu lopetettu"
 
 #. Translators: Messages reported when watcher is started.
 msgid "Started watcher {}"
-msgstr "Vahti käynnistetty {}"
+msgstr "Tarkkailu aloitettu {}"
 
 #. Translators: Messages reported when no navigation object available to watch.
 msgid "No navigation object available to watch"
-msgstr "Ei vahdittavaa navigointiobjektia"
+msgstr "Ei tarkkailtavaa navigointiobjektia"
 
 #. Translators: This is the label for the ObjWatcher settings panel.
 msgid "ObjWatcher"
-msgstr "Objektivahti"
+msgstr "Objektien tarkkailija"
 
 #. Translators: This is the label of a SpinCtrl in the ObjWatcher settings panel
 #. This option controls the interval of the Watcher timer (in milliseconds)
 msgid "Watcher timer interval"
-msgstr "Vahtiajastimen aikaväli"
+msgstr "Tarkkailuajastimen aikaväli"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
 #. to be shown on installation and add-on information found in Add-ons Manager.
 msgid "obj Watcher"
-msgstr "Objektivahti"
+msgstr "Objektien tarkkailija"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "This NVDA add-on watches changes to attributes of navigation objects."
-msgstr "Tämä lisäosa vahtii navigointiobjektien määreiden muutoksia."
+msgstr "Tämä lisäosa tarkkailee navigointiobjektien määreiden muutoksia."
