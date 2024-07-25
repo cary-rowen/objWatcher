@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: objWatcher 0.4.3\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2024-05-18 10:34+0000\n"
-"PO-Revision-Date: 2024-06-02 14:56+0300\n"
+"PO-Revision-Date: 2024-07-16 20:51+0300\n"
 "Last-Translator: Jani Kinnunen <janikinnunen340@gmail.com>\n"
 "Language-Team: \n"
 "Language: fi\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #. Translators: The category name displayed in the input gesture dialog
 msgid "objWatcher"
-msgstr "Objektien tarkkailija"
+msgstr "Objektin tarkkailija"
 
 #. Translators: Input a help message in objWatcher about
 #. starting or stopping and reporting the currently watched attributes.
@@ -47,7 +47,7 @@ msgstr "Ei tarkkailtavaa navigointiobjektia"
 
 #. Translators: This is the label for the ObjWatcher settings panel.
 msgid "ObjWatcher"
-msgstr "Objektien tarkkailija"
+msgstr "Objektin tarkkailija"
 
 #. Translators: This is the label of a SpinCtrl in the ObjWatcher settings panel
 #. This option controls the interval of the Watcher timer (in milliseconds)
@@ -58,7 +58,7 @@ msgstr "Tarkkailuajastimen aikaväli"
 #. Translators: Summary for this add-on
 #. to be shown on installation and add-on information found in Add-ons Manager.
 msgid "obj Watcher"
-msgstr "Objektien tarkkailija"
+msgstr "Objektin tarkkailija"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
