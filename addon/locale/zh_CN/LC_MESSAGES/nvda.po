@@ -7,55 +7,178 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 'OBJWatcher' '0.1'\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2023-09-05 06:04+0800\n"
-"PO-Revision-Date: 2023-09-05 06:05+0800\n"
+"POT-Creation-Date: 2024-11-17 06:36+0800\n"
+"PO-Revision-Date: 2024-11-17 06:36+0800\n"
 "Last-Translator: hwf1324 <1398969445@qq.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #. Translators: The category name displayed in the input gesture dialog
-#: addon\globalPlugins\objWatcher\__init__.py:28
+#: addon\globalPlugins\objWatcher\__init__.py:48
 msgid "objWatcher"
 msgstr "对象监视器"
 
-#. Translators: Input a help message in objWatcher about
-#. starting or stopping and reporting the currently watched attributes.
-#: addon\globalPlugins\objWatcher\__init__.py:57
+#. Translators: Help message when entering objWatcher layer command in input help
+#: addon\globalPlugins\objWatcher\__init__.py:96
+msgid "Enter watcher layer commands"
+msgstr "打开对象监视命令层"
+
+#. Translators: Message when watching has not started and no items are in the watch list
+#: addon\globalPlugins\objWatcher\__init__.py:108
+msgid "No items are being watched. Please add items to watch."
+msgstr "尚未启动监视，请添加希望被监视的对象。"
+
+#. Translators: Message when watching is active and items are being watched
+#: addon\globalPlugins\objWatcher\__init__.py:110
+msgid "Watching in progress. {} items are being tracked."
+msgstr "正在监视 {} 个对象。"
+
+#. Translators: Message when watching is paused and items are in the watch list
+#: addon\globalPlugins\objWatcher\__init__.py:112
+msgid "Watching paused. {} items in the watch list."
+msgstr "已暂停，{}个对象待监视。"
+
+#. Translators: Message when exiting watcher layer
+#: addon\globalPlugins\objWatcher\__init__.py:122
+msgid "Exited watcher layer"
+msgstr "已退出命令层"
+
+#. Translators: Presented in input help mode.
+#: addon\globalPlugins\objWatcher\__init__.py:126
+msgid "Add current navigator object to watchlist"
+msgstr "将当前导航对象添加到监视列表"
+
+#. Translators: Message to the user when an invalid gesture is detected
+#: addon\globalPlugins\objWatcher\__init__.py:136
+msgid "Invalid key: '{}'. Please use a numeric key like NVDA+Alt+0~9."
+msgstr "无效的按键：“{}”。请使用数字键，如 NVDA+Alt+0~9。"
+
+#. Translators: Announces the status of the watched object at the given position
+#: addon\globalPlugins\objWatcher\__init__.py:145
+msgid "Position {}: {}"
+msgstr "位置 {}: {}"
+
+#. Translators: Message when there is no navigation object to add
+#: addon\globalPlugins\objWatcher\__init__.py:160
+msgid "No navigation object available to add"
+msgstr "没有可供添加的对象"
+
+#. Translators: Message when the object is already being watched at another position
+#: addon\globalPlugins\objWatcher\__init__.py:169
+msgid "This object is already being watched at position {}"
+msgstr "不可重复添加，该对象已被添加到位置 {}"
+
+#: addon\globalPlugins\objWatcher\__init__.py:177
+msgid "Unnamed object"
+msgstr "未命名对象"
+
+#. Translators: Message when an object is added to the watch list and watching not started
+#: addon\globalPlugins\objWatcher\__init__.py:188
+msgid "Added object to position {}: {}, Watching has not started."
+msgstr "已添加 {} 到位置 {}"
+
+#. Translators: Presented in input help mode.
+#: addon\globalPlugins\objWatcher\__init__.py:208
 msgid ""
-"Press once to start watching the current navigator object. If a navigator "
-"object is currently being watched, the watched attribute will be reported. "
-"Press twice to stop watching."
-msgstr ""
-"按一次开始监视当前导航对象。如果当前已开始监视，则会读出被监视的对象属性。"
-"连按两次停止监视。"
+"Press once to delete the last watched object; press twice to delete all "
+"watched objects"
+msgstr "按一次删除最后选中的对象；按两次删除所有被监视的对象"
 
-#. Translators: Messages reported when watcher is stopped
-#: addon\globalPlugins\objWatcher\__init__.py:87
-msgid "Stopped watcher"
-msgstr "已停止监视"
+#. Translators: Message when there are no objects being watched
+#: addon\globalPlugins\objWatcher\__init__.py:226
+msgid "No objects are being watched"
+msgstr "尚未监视对象"
 
-#. Translators: Messages reported when watcher is started.
-#: addon\globalPlugins\objWatcher\__init__.py:94
-msgid "Started watcher {}"
-msgstr "已开始监视 {}"
+#. Translators: Message when all watched objects have been removed
+#: addon\globalPlugins\objWatcher\__init__.py:237
+msgid "Removed all {} watched objects"
+msgstr "已删除全部 {} 个对象"
 
-#. Translators: Messages reported when no navigation object available to watch.
-#: addon\globalPlugins\objWatcher\__init__.py:99
-msgid "No navigation object available to watch"
-msgstr "没有可供监视的对象"
+#. Translators: Message when no object has been checked
+#: addon\globalPlugins\objWatcher\__init__.py:243
+msgid "No object has been checked"
+msgstr "未选择要删除的对象"
+
+#. Translators: Message when a watched object has been removed
+#: addon\globalPlugins\objWatcher\__init__.py:253
+msgid "Removed {} from position {}"
+msgstr "{} 已从位置 {} 删除"
+
+#. Translators: Message when the last checked object is no longer being watched
+#: addon\globalPlugins\objWatcher\__init__.py:264
+msgid "The last checked object is no longer being watched"
+msgstr "选择的对象已不再监视列表中"
+
+#. Translators: Message when an object is no longer available and has been removed
+#: addon\globalPlugins\objWatcher\__init__.py:284
+msgid "{} is no longer available and has been removed from watch list"
+msgstr "{} 已失效并从监视列表中删除"
+
+#. Translators: Message announcing updated attributes of the object
+#: addon\globalPlugins\objWatcher\__init__.py:291
+msgid "{}"
+msgstr "{}"
+
+#. Translators: Message when an object caused an error and has been removed
+#: addon\globalPlugins\objWatcher\__init__.py:297
+msgid "{} caused an error and has been removed from watch list"
+msgstr "{} 遇到错误并从监视列表中删除"
+
+#: addon\globalPlugins\objWatcher\__init__.py:317
+msgid "Error reading attributes"
+msgstr "访问属性出错"
+
+#. Translators: Presented in input help mode.
+#: addon\globalPlugins\objWatcher\__init__.py:330
+msgid "Toggle the watch status of the current window"
+msgstr "开关监视当前窗口标题"
+
+#. Translators: Message when there is no foreground window available
+#: addon\globalPlugins\objWatcher\__init__.py:336
+msgid "No foreground window available"
+msgstr "未找到前台窗口"
+
+#. Translators: Message when a window has been removed from the watch list
+#: addon\globalPlugins\objWatcher\__init__.py:345
+msgid "Removed window {} from watch list"
+msgstr "窗口 {} 已从监视列表中移除"
+
+#: addon\globalPlugins\objWatcher\__init__.py:353
+msgid "Unnamed window"
+msgstr "未命名窗口"
+
+#. Translators: Message when a window has been added to the watch list
+#: addon\globalPlugins\objWatcher\__init__.py:363
+msgid "Added window {} to watch list"
+msgstr "窗口 {} 已添加到监视列表"
+
+#. Translators: Presented in input help mode.
+#: addon\globalPlugins\objWatcher\__init__.py:368
+msgid "Toggle pause/resume watching"
+msgstr "切换暂停/继续监视"
+
+#. Translators: Message when watching is resumed
+#: addon\globalPlugins\objWatcher\__init__.py:374
+msgid "Watching resumed"
+msgstr "已恢复监视"
+
+#. Translators: Message when watching is paused
+#: addon\globalPlugins\objWatcher\__init__.py:382
+msgid "Watching paused"
+msgstr "已暂停监视"
 
 #. Translators: This is the label for the ObjWatcher settings panel.
-#: addon\globalPlugins\objWatcher\settings.py:14
+#: addon\globalPlugins\objWatcher\settings.py:17
 msgid "ObjWatcher"
 msgstr "对象监视器"
 
 #. Translators: This is the label of a SpinCtrl in the ObjWatcher settings panel
 #. This option controls the interval of the Watcher timer (in milliseconds)
-#: addon\globalPlugins\objWatcher\settings.py:20
+#: addon\globalPlugins\objWatcher\settings.py:23
 msgid "Watcher timer interval"
 msgstr "监视对象周期（毫秒）"
 
@@ -71,6 +194,20 @@ msgstr "对象监视器"
 #: buildVars.py:26
 msgid "This NVDA add-on watches changes to attributes of navigation objects."
 msgstr "这是一个用于监视导航对象属性变化的插件。"
+
+#~ msgid "Delete the last checked object or all objects on double press"
+#~ msgstr "按一次删除最后选中的对象，连按两次删除所有被监视对象"
+
+#~ msgid ""
+#~ "Press once to start watching the current navigator object. If a navigator "
+#~ "object is currently being watched, the watched attribute will be "
+#~ "reported. Press twice to stop watching."
+#~ msgstr ""
+#~ "按一次开始监视当前导航对象。如果当前已开始监视，则会读出被监视的对象属性。"
+#~ "连按两次停止监视。"
+
+#~ msgid "Stopped watcher"
+#~ msgstr "已停止监视"
 
 #~ msgid "Start or stop the navigation object watcher."
 #~ msgstr "启动或停止对象监视"
