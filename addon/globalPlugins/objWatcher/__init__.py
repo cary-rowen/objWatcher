@@ -13,7 +13,7 @@ import ui
 import versionInfo
 import wx
 import tones
-from scriptHandler import getLastScriptRepeatCount, script
+from scriptHandler import script
 import time
 from typing import Dict, Any
 from functools import wraps
@@ -25,14 +25,16 @@ from . import settings
 confspec = {
 	"interval": "integer(default=100)",
 	# TODO: Refactor hardcoded default watch attributes (Issue #6): https://github.com/cary-rowen/objWatcher/issues/6
-	"watchAttributes": "string(default='name,value,description')"
+	"watchAttributes": "string(default='name,value,description')",
 }
 config.conf.spec["objWatcher"] = confspec
 
 addonHandler.initTranslation()
 
+
 def finally_(func, final):
 	"""Calls final after func, even if it fails."""
+
 	def wrap(f):
 		@wraps(f)
 		def new(*args, **kwargs):
@@ -40,8 +42,11 @@ def finally_(func, final):
 				func(*args, **kwargs)
 			finally:
 				final()
+
 		return new
+
 	return wrap(final)
+
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Translators: The category name displayed in the input gesture dialog
@@ -71,7 +76,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		for numberKey in range(0, 10):
 			self.__watcherGestures[f"kb:{numberKey}"] = "HandleNumberKey"
 
-
 	def getScript(self, gesture):
 		if not self.toggling:
 			return globalPluginHandler.GlobalPlugin.getScript(self, gesture)
@@ -94,7 +98,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	@script(
 		# Translators: Help message when entering objWatcher layer command in input help
 		description=_("Enter watcher layer commands"),
-		gesture="KB:NVDA+alt+w"
+		gesture="KB:NVDA+alt+w",
 	)
 	def script_watcherLayer(self, gesture):
 		if self.toggling:
@@ -105,11 +109,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		watched_count = len(self.watchingObjs)
 		summary_message = (
 			# Translators: Message when watching has not started and no items are in the watch list
-			_("No items are being watched. Please add items to watch.") if watched_count == 0 else
+			_("No items are being watched. Please add items to watch.")
+			if watched_count == 0
 			# Translators: Message when watching is active and items are being watched
-			_("Watching in progress. {} items are being tracked.").format(watched_count) if not self.watchingPaused else
+			else _("Watching in progress. {} items are being tracked.").format(watched_count)
+			if not self.watchingPaused
 			# Translators: Message when watching is paused and items are in the watch list
-			_("Watching paused. {} items in the watch list.").format(watched_count)
+			else _("Watching paused. {} items in the watch list.").format(watched_count)
 		)
 		ui.message(summary_message)
 		self.bindGestures(self.__watcherGestures)
@@ -133,7 +139,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			invalid_key = gesture.mainKeyName
 			log.warning(f"Invalid key detected: '{invalid_key}'.")
 			# Translators: Message to the user when an invalid gesture is detected
-			ui.message(_("Invalid key: '{}'. Please use a numeric key like NVDA+Alt+0~9.").format(invalid_key))
+			ui.message(
+				_("Invalid key: '{}'. Please use a numeric key like NVDA+Alt+0~9.").format(invalid_key)
+			)
 			return
 
 		# Check if this number is already being watched
@@ -142,15 +150,21 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				# Record the last checked number
 				self.lastCheckedNumber = number
 				# Translators: Announces the status of the watched object at the given position
-				ui.message(_("Position {}: {}").format(
-					number,
-					# Ensure lastText is populated before comparison
-					data["name"] if data["name"] == (data["lastText"] or self._getWatchingAttribute(data["obj"])) else
-					# If name and lastText are different, report both name and lastText
-					"{} - {}".format(data["name"], data["lastText"] or self._getWatchingAttribute(data["obj"])) if data["name"] else
-					# If name is empty, only report lastText or fallback to _getWatchingAttribute
-					data["lastText"] or self._getWatchingAttribute(data["obj"])
-				))
+				ui.message(
+					_("Position {}: {}").format(
+						number,
+						# Ensure lastText is populated before comparison
+						data["name"]
+						if data["name"] == (data["lastText"] or self._getWatchingAttribute(data["obj"]))
+						# If name and lastText are different, report both name and lastText
+						else "{} - {}".format(
+							data["name"], data["lastText"] or self._getWatchingAttribute(data["obj"])
+						)
+						if data["name"]
+						# If name is empty, only report lastText or fallback to _getWatchingAttribute
+						else data["lastText"] or self._getWatchingAttribute(data["obj"]),
+					)
+				)
 				return
 
 		# If this number is not used, try to add the current object
@@ -176,7 +190,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			"lastText": None,
 			"name": obj.name or _("Unnamed object"),
 			"addTime": time.time(),
-			"number": number
+			"number": number,
 		}
 
 		# Start the timer if not paused and not already running
@@ -185,8 +199,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 		if self.watchingPaused:
 			# Translators: Message when an object is added to the watch list and watching not started
-			ui.message(_("Added object to position {}: {}, Watching has not started.").format(
-				number, self.watchingObjs[obj_id]["name"]))
+			ui.message(
+				_("Added object to position {}: {}, Watching has not started.").format(
+					number, self.watchingObjs[obj_id]["name"]
+				)
+			)
 		cues.Start()
 		self.finish()  # Exit layer mode after adding the object
 
@@ -205,15 +222,16 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	@script(
 		# Translators: Presented in input help mode.
-		description=_("Press once to delete the last watched object; press twice to delete all watched objects"),
+		description=_(
+			"Press once to delete the last watched object; press twice to delete all watched objects"
+		),
 	)
 	def script_DeleteLastChecked(self, gesture):
 		currentTime = time.time()
 		multiPressTimeout = self._getMultiPressTimeout()
 		log.info("multi timeout %s", multiPressTimeout)
 		isDoublePress = (
-			gesture.mainKeyName == self.lastKeyName
-			and (currentTime - self.lastKeyTime) < multiPressTimeout
+			gesture.mainKeyName == self.lastKeyName and (currentTime - self.lastKeyTime) < multiPressTimeout
 		)
 
 		self.lastKeyTime = currentTime
@@ -281,7 +299,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 					name = data["name"]
 					del self.watchingObjs[obj_id]
 					# Translators: Message when an object is no longer available and has been removed
-					ui.message(_("{} is no longer available and has been removed from watch list").format(name))
+					ui.message(
+						_("{} is no longer available and has been removed from watch list").format(name)
+					)
 					continue
 
 				attributeText = self._getWatchingAttribute(obj)
@@ -304,7 +324,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		"""Retrieve the watched attributes of an object"""
 		non_empty_attributes = []
 		seen_values = set()
-		watch_attrs = config.conf["objWatcher"]["watchAttributes"].split(',')
+		watch_attrs = config.conf["objWatcher"]["watchAttributes"].split(",")
 
 		try:
 			for attr in watch_attrs:
@@ -316,7 +336,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		except Exception:
 			return _("Error reading attributes")
 
-		return ', '.join(non_empty_attributes) if non_empty_attributes else ""
+		return ", ".join(non_empty_attributes) if non_empty_attributes else ""
 
 	def terminate(self):
 		super().terminate()
@@ -352,7 +372,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				"lastText": None,
 				"name": obj.name or _("Unnamed window"),
 				"addTime": time.time(),
-				"number": None  # Special objects do not use number positions
+				"number": None,  # Special objects do not use number positions
 			}
 
 			# Start the timer if not paused and not already running
@@ -360,8 +380,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				self.timer.Start(config.conf["objWatcher"]["interval"])
 
 			# Translators: Message when a window has been added to the watch list
-			ui.message(_("Added window {} to watch list").format(
-				self.watchingObjs[obj_id]["name"]))
+			ui.message(_("Added window {} to watch list").format(self.watchingObjs[obj_id]["name"]))
 
 	@script(
 		# Translators: Presented in input help mode.
