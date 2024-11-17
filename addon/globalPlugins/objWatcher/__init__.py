@@ -15,7 +15,7 @@ import wx
 import tones
 from scriptHandler import script
 import time
-from typing import Dict, Any
+from typing import Dict, Any, List
 from functools import wraps
 from logHandler import log
 
@@ -54,7 +54,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
 		super().__init__()
-		self.watchingObjs: Dict[int, Dict[str, Any]] = {}
+		self.watchingObjs: List[Dict[str, Any]] = []
 		self.lastCheckedNumber = None
 		self.lastKeyTime = 0
 		self.lastKeyName = None
@@ -145,7 +145,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			return
 
 		# Check if this number is already being watched
-		for obj_id, data in list(self.watchingObjs.items()):
+		for data in self.watchingObjs:
 			if data.get("number") == number:
 				# Record the last checked number
 				self.lastCheckedNumber = number
@@ -176,22 +176,22 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			return
 
 		# Check if the object is already being watched at another position
-		obj_id = id(obj)
-		if obj_id in self.watchingObjs:
-			existing_number = self.watchingObjs[obj_id].get("number")
-			# Translators: Message when the object is already being watched at another position
-			ui.message(_("This object is already being watched at position {}").format(existing_number))
-			self.finish()  # Exit layer mode on error
-			return
+		for data in self.watchingObjs:
+			if obj == data["obj"]:
+				existing_number = data.get("number")
+				# Translators: Message when the object is already being watched at another position
+				ui.message(_("This object is already being watched at position {}").format(existing_number))
+				self.finish()  # Exit layer mode on error
+				return
 
 		# Add new object
-		self.watchingObjs[obj_id] = {
+		self.watchingObjs.append({
 			"obj": obj,
 			"lastText": None,
 			"name": obj.name or _("Unnamed object"),
 			"addTime": time.time(),
 			"number": number,
-		}
+		})
 
 		# Start the timer if not paused and not already running
 		if not self.watchingPaused and not self.timer.IsRunning():
@@ -201,7 +201,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# Translators: Message when an object is added to the watch list and watching not started
 			ui.message(
 				_("Added object to position {}: {}, Watching has not started.").format(
-					number, self.watchingObjs[obj_id]["name"]
+					number, self.watchingObjs[-1]["name"]
 				)
 			)
 		cues.Start()
@@ -261,11 +261,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			return
 
 		# Find and delete the object
-		for obj_id, data in list(self.watchingObjs.items()):
+		for data in self.watchingObjs:
 			if data.get("number") == self.lastCheckedNumber:
 				name = data["name"]
 				number = self.lastCheckedNumber
-				del self.watchingObjs[obj_id]
+				self.watchingObjs.remove(data)
 				# Translators: Message when a watched object has been removed
 				ui.message(_("Removed {} from position {}").format(name, number))
 
@@ -274,7 +274,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 					self.timer.Stop()
 
 				self.lastCheckedNumber = None  # Reset the last checked number
-				self.finish()  # Exit layer mode after deletion
 				return
 
 		# Translators: Message when the last checked object is no longer being watched
@@ -289,14 +288,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			self.timer.Stop()
 			return
 
-		# Use list() to create a copy to avoid modifying the dictionary while iterating
-		for obj_id, data in list(self.watchingObjs.items()):
+		# Use a copy of the list to avoid modifying the list while iterating
+		for data in self.watchingObjs[:]:
 			obj = data["obj"]
 			try:
 				# Check if the object still exists and is accessible
 				if not api.isNVDAObject(obj):
 					name = data["name"]
-					del self.watchingObjs[obj_id]
+					self.watchingObjs.remove(data)
 					# Translators: Message when an object is no longer available and has been removed
 					ui.message(
 						_("{} is no longer available and has been removed from watch list").format(name)
@@ -311,7 +310,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			except Exception:
 				# If there is an error accessing object attributes, remove the object
 				name = data["name"]
-				del self.watchingObjs[obj_id]
+				self.watchingObjs.remove(data)
 				# Translators: Message when an object caused an error and has been removed
 				ui.message(_("{} caused an error and has been removed from watch list").format(name))
 
@@ -355,31 +354,32 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			ui.message(_("No foreground window available"))
 			return
 
-		obj_id = id(obj)
-		# If the object is already in the watch list, remove it
-		if obj_id in self.watchingObjs:
-			name = self.watchingObjs[obj_id]["name"]
-			del self.watchingObjs[obj_id]
-			# Translators: Message when a window has been removed from the watch list
-			ui.message(_("Removed window {} from watch list").format(name))
-			if not self.watchingObjs and self.timer.IsRunning():
-				self.timer.Stop()
-		else:
-			# Add the object to the watch list
-			self.watchingObjs[obj_id] = {
-				"obj": obj,
-				"lastText": None,
-				"name": obj.name or _("Unnamed window"),
-				"addTime": time.time(),
-				"number": None,  # Special objects do not use number positions
-			}
+		# Check if the object is already in the watch list
+		for data in self.watchingObjs:
+			if obj == data["obj"]:
+				name = data["name"]
+				self.watchingObjs.remove(data)
+				# Translators: Message when a window has been removed from the watch list
+				ui.message(_("Removed window {} from watch list").format(name))
+				if not self.watchingObjs and self.timer.IsRunning():
+					self.timer.Stop()
+				return
 
-			# Start the timer if not paused and not already running
-			if not self.watchingPaused and not self.timer.IsRunning():
-				self.timer.Start(config.conf["objWatcher"]["interval"])
+		# Add the object to the watch list
+		self.watchingObjs.append({
+			"obj": obj,
+			"lastText": None,
+			"name": obj.name or _("Unnamed window"),
+			"addTime": time.time(),
+			"number": None,  # Special objects do not use number positions
+		})
 
-			# Translators: Message when a window has been added to the watch list
-			ui.message(_("Added window {} to watch list").format(self.watchingObjs[obj_id]["name"]))
+		# Start the timer if not paused and not already running
+		if not self.watchingPaused and not self.timer.IsRunning():
+			self.timer.Start(config.conf["objWatcher"]["interval"])
+
+		# Translators: Message when a window has been added to the watch list
+		ui.message(_("Added window {} to watch list").format(self.watchingObjs[-1]["name"]))
 
 	@script(
 		# Translators: Presented in input help mode.
