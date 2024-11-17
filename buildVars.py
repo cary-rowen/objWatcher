@@ -25,7 +25,7 @@ addon_info = {
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 	"addon_description": _("""This NVDA add-on watches changes to attributes of navigation objects."""),
 	# version
-	"addon_version": "1.0.0",
+	"addon_version": "1.0.1",
 	# Author(s)
 	"addon_author": "Cary-rowen <manchen_0528@outlook.com>, hwf1324 <1398969445@qq.com>",
 	# URL for the add-on documentation support

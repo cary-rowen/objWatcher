@@ -65,6 +65,9 @@ Access the settings panel from NVDA’s Preferences menu to configure the follow
 2. Report bugs or provide feedback through the [GitHub Issues page][GitHubIssue].  
 
 ## Release Notes
+### Version 1.0.1
+- Fixed duplicate objects being added
+- Other improvements
 
 ### Version 1.0.0
 - Added watcher layer commands (`NVDA+Alt+W`).  
