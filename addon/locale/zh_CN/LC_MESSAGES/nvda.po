@@ -79,7 +79,7 @@ msgstr "未命名对象"
 #. Translators: Message when an object is added to the watch list and watching not started
 #: addon\globalPlugins\objWatcher\__init__.py:188
 msgid "Added object to position {}: {}, Watching has not started."
-msgstr "已添加 {} 到位置 {}"
+msgstr "位置 {} 已添加 {}"
 
 #. Translators: Presented in input help mode.
 #: addon\globalPlugins\objWatcher\__init__.py:208
