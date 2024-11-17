@@ -216,7 +216,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			else:
 				timeout_ms = 1000
 		except Exception as e:
-			log.debug("Failed to get multiPressTimeout from config: %s", e)
+			log.warning("Failed to get multiPressTimeout from config: %s", e)
 			timeout_ms = 1000
 		return timeout_ms / 1000
 
@@ -229,7 +229,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def script_DeleteLastChecked(self, gesture):
 		currentTime = time.time()
 		multiPressTimeout = self._getMultiPressTimeout()
-		log.info("multi timeout %s", multiPressTimeout)
 		isDoublePress = (
 			gesture.mainKeyName == self.lastKeyName and (currentTime - self.lastKeyTime) < multiPressTimeout
 		)
