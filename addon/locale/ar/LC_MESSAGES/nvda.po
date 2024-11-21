@@ -3,75 +3,193 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: 'objWatcher' '0.3.4'\n"
+"Project-Id-Version: 'objWatcher' '1.0.2'\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2023-09-27 00:24+0300\n"
-"PO-Revision-Date: 2023-09-27 03:10+0300\n"
+"POT-Creation-Date: 2024-11-20 15:21+0200\n"
+"PO-Revision-Date: 2024-11-20 16:42+0200\n"
+"Last-Translator: \n"
+"Language-Team: Arabic\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Last-Translator: \n"
-"Language-Team: Arabic\n"
-"X-Generator: Poedit 2.0.7\n"
+"X-Generator: Poedit 3.4.4\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n"
-"%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
 
 #. Translators: The category name displayed in the input gesture dialog
-#: addon\globalPlugins\objWatcher\__init__.py:29
+#: addon\globalPlugins\objWatcher\__init__.py:53
 msgid "objWatcher"
-msgstr "مُراقِب الكائنات"
+msgstr "المراقب للتغييرات"
 
-#. Translators: Input a help message in objWatcher about
-#. starting or stopping and reporting the currently watched attributes.
-#: addon\globalPlugins\objWatcher\__init__.py:48
+#. Translators: Help message when entering objWatcher layer command in input help
+#: addon\globalPlugins\objWatcher\__init__.py:100
+msgid "Enter watcher layer commands"
+msgstr "الدخول إلى نافذة التحكم"
+
+#. Translators: Message when watching has not started and no items are in the watch list
+#: addon\globalPlugins\objWatcher\__init__.py:112
+msgid "No items are being watched. Please add items to watch."
+msgstr "ليس هناك أي عنصر مراقب, تفضل بإضافة عنصر لمُراقبته."
+
+#. Translators: Message when watching is active and items are being watched
+#: addon\globalPlugins\objWatcher\__init__.py:115
+msgid "Watching in progress. {} items are being tracked."
+msgstr "المراقبة مستمرة. {} عناصر تتم متابعتها."
+
+#. Translators: Message when watching is paused and items are in the watch list
+#: addon\globalPlugins\objWatcher\__init__.py:118
+msgid "Watching paused. {} items in the watch list."
+msgstr "توقف المراقبة مؤقتا. {} عناصر في قائمة المتابعة."
+
+#. Translators: Message when exiting watcher layer
+#: addon\globalPlugins\objWatcher\__init__.py:128
+msgid "Exited watcher layer"
+msgstr "الخروج من نافذة التحكم"
+
+#. Translators: Presented in input help mode.
+#: addon\globalPlugins\objWatcher\__init__.py:132
+msgid "Add current navigator object to watchlist"
+msgstr "إضافة عنصر التصفح الحالي لقائمة المراقبة"
+
+#: addon\globalPlugins\objWatcher\__init__.py:143
+msgid "Invalid key: '{}'. Please use a numeric key like NVDA+Alt+0~9."
+msgstr "هذا الإختصار غير مناسب '{}'. الرجاء استخدام رقم مثل NVDA+Alt+0~9."
+
+#: addon\globalPlugins\objWatcher\__init__.py:154
+msgid "Position {}: {}"
+msgstr "الموقع {} : {}"
+
+#. Translators: Message when there is no navigation object to add
+#: addon\globalPlugins\objWatcher\__init__.py:174
+msgid "No navigation object available to add"
+msgstr "ليس هناك عناصر تصفح لإضافتها"
+
+#. Translators: Message when the object is already being watched at another position
+#: addon\globalPlugins\objWatcher\__init__.py:183
+msgid "This object is already being watched at position {}"
+msgstr "هذا العنصر تتم متابعته بالفعل في المكان {}"
+
+#: addon\globalPlugins\objWatcher\__init__.py:191
+msgid "Unnamed object"
+msgstr "هذا العنصر ليس له اسم"
+
+#: addon\globalPlugins\objWatcher\__init__.py:203
+msgid "Added object to position {}: {}, Watching has not started."
+msgstr "إضافة عنصر إلى المكان {} : {}, المراقبة لم تبدأ بعد."
+
+#: addon\globalPlugins\objWatcher\__init__.py:226
 msgid ""
-"Press once to start watching the current navigator object. If a navigator "
-"object is currently being watched, the watched attribute will be reported. "
-"Press twice to stop watching."
+"Press once to delete the last watched object; press twice to delete all "
+"watched objects"
 msgstr ""
-"إضغط الإختصار مرة واحدة لِتبدأ مُراقبةْ الكائن. و إذا كانت المُراقبة قد بدأت "
-"مِن قبل, فسيتم الإعلان عن حالةْ الكائن. إضغط الإختصار مرتين مُتتاليتين لإيقاف "
-"المُراقبة."
+"إضغط مرة واحدة لإزالة آخر عنصر مُراقب; إضغط مرتين لإزالة جميع العناصر "
+"المراقبة"
 
-#. Translators: Messages reported when watcher is stopped
-#: addon\globalPlugins\objWatcher\__init__.py:78
-msgid "Stopped watcher"
-msgstr "إيقاف المُراقبة"
+#. Translators: Message when there are no objects being watched
+#: addon\globalPlugins\objWatcher\__init__.py:243
+msgid "No objects are being watched"
+msgstr "ليس هناك أي عنصر تتم مراقبته"
 
-#. Translators: Messages reported when watcher is started.
-#: addon\globalPlugins\objWatcher\__init__.py:85
-msgid "Started watcher {}"
-msgstr "بدء مراقبةْ {}"
+#. Translators: Message when all watched objects have been removed
+#: addon\globalPlugins\objWatcher\__init__.py:254
+msgid "Removed all {} watched objects"
+msgstr "إزالة الجميع {} العناصر المراقبة"
 
-#. Translators: Messages reported when no navigation object available to watch.
-#: addon\globalPlugins\objWatcher\__init__.py:90
-msgid "No navigation object available to watch"
-msgstr "لا يتوفر كائن تَصَفُّح لِمراقبته"
+#. Translators: Message when no object has been checked
+#: addon\globalPlugins\objWatcher\__init__.py:260
+msgid "No object has been checked"
+msgstr "لم يتم تحديد أي عنصر"
+
+#. Translators: Message when a watched object has been removed
+#: addon\globalPlugins\objWatcher\__init__.py:270
+msgid "Removed {} from position {}"
+msgstr "إزالة {} من المكان {}"
+
+#. Translators: Message when the last checked object is no longer being watched
+#: addon\globalPlugins\objWatcher\__init__.py:280
+msgid "The last checked object is no longer being watched"
+msgstr "العنصر الأخير لم يعد مُراقبا"
+
+#: addon\globalPlugins\objWatcher\__init__.py:301
+msgid "{} is no longer available and has been removed from watch list"
+msgstr "{} لم يعد موجودا و تمت إزالته من قائمة المتابعة"
+
+#. Translators: Message announcing updated attributes of the object
+#: addon\globalPlugins\objWatcher\__init__.py:309
+msgid "{}"
+msgstr "{}"
+
+#. Translators: Message when an object caused an error and has been removed
+#: addon\globalPlugins\objWatcher\__init__.py:315
+msgid "{} caused an error and has been removed from watch list"
+msgstr "{} قد تسبب بإحداث خطأ و تمت إزالته من قائمة المتابعة"
+
+#: addon\globalPlugins\objWatcher\__init__.py:335
+msgid "Error reading attributes"
+msgstr "خطأ في قراءة الخصاءص"
+
+#. Translators: Presented in input help mode.
+#: addon\globalPlugins\objWatcher\__init__.py:348
+msgid "Toggle the watch status of the current window"
+msgstr "تغيير حالةة المراقبة للنافذة الحالية"
+
+#. Translators: Message when there is no foreground window available
+#: addon\globalPlugins\objWatcher\__init__.py:354
+msgid "No foreground window available"
+msgstr "لا يوجد نافذة في الواجهة"
+
+#. Translators: Message when a window has been removed from the watch list
+#: addon\globalPlugins\objWatcher\__init__.py:363
+msgid "Removed window {} from watch list"
+msgstr "إزالة النافذة {} من قائمة المراقبة"
+
+#: addon\globalPlugins\objWatcher\__init__.py:372
+msgid "Unnamed window"
+msgstr "نافذة ليس لها اسم"
+
+#. Translators: Message when a window has been added to the watch list
+#: addon\globalPlugins\objWatcher\__init__.py:382
+msgid "Added window {} to watch list"
+msgstr "إضافة النافذة {} لقائمة المتابعة"
+
+#. Translators: Presented in input help mode.
+#: addon\globalPlugins\objWatcher\__init__.py:386
+msgid "Toggle pause/resume watching"
+msgstr "تغيير إيقاف و إستئناف المراقبة"
+
+#. Translators: Message when watching is resumed
+#: addon\globalPlugins\objWatcher\__init__.py:392
+msgid "Watching resumed"
+msgstr "إستئناف المراقبة"
+
+#. Translators: Message when watching is paused
+#: addon\globalPlugins\objWatcher\__init__.py:400
+msgid "Watching paused"
+msgstr "إيقاف المراقبة مؤقتا"
 
 #. Translators: This is the label for the ObjWatcher settings panel.
 #: addon\globalPlugins\objWatcher\settings.py:17
 msgid "ObjWatcher"
-msgstr "مُراقبةْ الكائنات"
+msgstr "مُراقب الخصائص المتغيرة"
 
 #. Translators: This is the label of a SpinCtrl in the ObjWatcher settings panel
 #. This option controls the interval of the Watcher timer (in milliseconds)
 #: addon\globalPlugins\objWatcher\settings.py:23
 msgid "Watcher timer interval"
-msgstr "الوقت الذي يتكرر عنده مراقبةْ الكائن"
+msgstr "الوقت الذي يتم عنده قراءة التغييرات"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
 #. to be shown on installation and add-on information found in Add-ons Manager.
 #: buildVars.py:23
 msgid "obj Watcher"
-msgstr "مراقبةْ الكائنات"
+msgstr "مراقب العناصر"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 #: buildVars.py:26
 msgid "This NVDA add-on watches changes to attributes of navigation objects."
-msgstr "تراقب هذه الإضافة لـ NVDA التغييرات التي تطرأ على خصائص كائن التصفح."
+msgstr "هذه الإضافة تراقب التغييرات التي تحصل لعنصر التصفح."
