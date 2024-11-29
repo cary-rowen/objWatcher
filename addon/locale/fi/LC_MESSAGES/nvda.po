@@ -9,41 +9,134 @@ msgstr ""
 "Project-Id-Version: objWatcher 0.4.3\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2024-05-18 10:34+0000\n"
-"PO-Revision-Date: 2024-07-16 20:51+0300\n"
+"PO-Revision-Date: 2024-11-23 21:47+0200\n"
 "Last-Translator: Jani Kinnunen <janikinnunen340@gmail.com>\n"
 "Language-Team: \n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.4.4\n"
+"X-Generator: Poedit 3.5\n"
 
 #. Translators: The category name displayed in the input gesture dialog
 msgid "objWatcher"
-msgstr "Objektin tarkkailija"
+msgstr "Objektien tarkkailija"
 
-#. Translators: Input a help message in objWatcher about
-#. starting or stopping and reporting the currently watched attributes.
+#. Translators: Help message when entering objWatcher layer command in input help
+msgid "Enter watcher layer commands"
+msgstr "Syötä tarkkailijan komentokerroskomentoja"
+
+#. Translators: Message when watching has not started and no items are in the watch list
+msgid "No items are being watched. Please add items to watch."
+msgstr "Kohteita ei tarkkailla. Lisää tarkkailtavia kohteita."
+
+#. Translators: Message when watching is active and items are being watched
+msgid "Watching in progress. {} items are being tracked."
+msgstr "Tarkkailu käynnissä. {} kohdetta seurataan."
+
+#. Translators: Message when watching is paused and items are in the watch list
+msgid "Watching paused. {} items in the watch list."
+msgstr "Tarkkailu keskeytetty. Tarkkailulistalla {} kohdetta."
+
+#. Translators: Message when exiting watcher layer
+msgid "Exited watcher layer"
+msgstr "Poistuttu tarkkailun komentokerroksesta"
+
+#. Translators: Presented in input help mode.
+msgid "Add current navigator object to watchlist"
+msgstr "Lisää nykyinen navigointiobjekti tarkkailulistalle"
+
+msgid "Invalid key: '{}'. Please use a numeric key like NVDA+Alt+0~9."
+msgstr "Virheellinen näppäin: '{}'. Käytä numeronäppäintä kuten NVDA+Alt+0–9."
+
+msgid "Position {}: {}"
+msgstr "Sijainti {}: {}"
+
+#. Translators: Message when there is no navigation object to add
+msgid "No navigation object available to add"
+msgstr "Ei lisättävää navigointiobjektia"
+
+#. Translators: Message when the object is already being watched at another position
+msgid "This object is already being watched at position {}"
+msgstr "Tätä objektia tarkkaillaan jo sijainnissa {}"
+
+msgid "Unnamed object"
+msgstr "Nimetön objekti"
+
+msgid "Added object to position {}: {}, Watching has not started."
+msgstr "Lisätty objekti sijaintiin {}: {}. Tarkkailua ei aloitettu."
+
 msgid ""
-"Press once to start watching the current navigator object. If a navigator "
-"object is currently being watched, the watched attribute will be reported. "
-"Press twice to stop watching."
+"Press once to delete the last watched object; press twice to delete all "
+"watched objects"
 msgstr ""
-"Aloita nykyisen navigointiobjektin tarkkailu painamalla kerran. Mikäli "
-"navigointiobjektin tarkkailu on jo käytössä, tarkkailtava määre puhutaan. "
-"Lopeta tarkkailu painamalla kahdesti."
+"Poista viimeksi tarkkailtu objekti painamalla kerran tai kaikki tarkkaillut "
+"painamalla kahdesti"
 
-#. Translators: Messages reported when watcher is stopped
-msgid "Stopped watcher"
-msgstr "Tarkkailu lopetettu"
+#. Translators: Message when there are no objects being watched
+msgid "No objects are being watched"
+msgstr "Objekteja ei tarkkailla"
 
-#. Translators: Messages reported when watcher is started.
-msgid "Started watcher {}"
-msgstr "Tarkkailu aloitettu {}"
+#. Translators: Message when all watched objects have been removed
+msgid "Removed all {} watched objects"
+msgstr "Kaikki tarkkaillut objektit poistettu"
 
-#. Translators: Messages reported when no navigation object available to watch.
-msgid "No navigation object available to watch"
-msgstr "Ei tarkkailtavaa navigointiobjektia"
+#. Translators: Message when no object has been checked
+msgid "No object has been checked"
+msgstr "Objektia ei tarkistettu"
+
+#. Translators: Message when a watched object has been removed
+msgid "Removed {} from position {}"
+msgstr "Poistettu {} sijainnista {}"
+
+#. Translators: Message when the last checked object is no longer being watched
+msgid "The last checked object is no longer being watched"
+msgstr "Viimeksi tarkistettua objektia ei enää tarkkailla"
+
+msgid "{} is no longer available and has been removed from watch list"
+msgstr "{} ei enää ole käytettävissä ja se poistettiin tarkkailulistalta"
+
+#. Translators: Message announcing updated attributes of the object
+msgid "{}"
+msgstr "{}"
+
+#. Translators: Message when an object caused an error and has been removed
+msgid "{} caused an error and has been removed from watch list"
+msgstr "{} aiheutti virheen ja se poistettiin tarkkailulistalta"
+
+msgid "Error reading attributes"
+msgstr "Virhe luettaessa määreitä"
+
+#. Translators: Presented in input help mode.
+msgid "Toggle the watch status of the current window"
+msgstr "Vaihda nykyisen ikkunan tarkkailutilaa"
+
+#. Translators: Message when there is no foreground window available
+msgid "No foreground window available"
+msgstr "Etualan ikkunaa ei käytettävissä"
+
+#. Translators: Message when a window has been removed from the watch list
+msgid "Removed window {} from watch list"
+msgstr "Ikkuna {} poistettu tarkkailulistalta"
+
+msgid "Unnamed window"
+msgstr "Nimetön ikkuna"
+
+#. Translators: Message when a window has been added to the watch list
+msgid "Added window {} to watch list"
+msgstr "Ikkuna {} lisätty tarkkailulistalle"
+
+#. Translators: Presented in input help mode.
+msgid "Toggle pause/resume watching"
+msgstr "Keskeytä/jatka tarkkailua"
+
+#. Translators: Message when watching is resumed
+msgid "Watching resumed"
+msgstr "Tarkkailua jatketaan"
+
+#. Translators: Message when watching is paused
+msgid "Watching paused"
+msgstr "Tarkkailu keskeytetty"
 
 #. Translators: This is the label for the ObjWatcher settings panel.
 msgid "ObjWatcher"
@@ -58,9 +151,21 @@ msgstr "Tarkkailuajastimen aikaväli"
 #. Translators: Summary for this add-on
 #. to be shown on installation and add-on information found in Add-ons Manager.
 msgid "obj Watcher"
-msgstr "Objektin tarkkailija"
+msgstr "Objektien tarkkailija"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "This NVDA add-on watches changes to attributes of navigation objects."
 msgstr "Tämä lisäosa tarkkailee navigointiobjektien määreiden muutoksia."
+
+#~ msgid ""
+#~ "Press once to start watching the current navigator object. If a navigator "
+#~ "object is currently being watched, the watched attribute will be "
+#~ "reported. Press twice to stop watching."
+#~ msgstr ""
+#~ "Aloita nykyisen navigointiobjektin tarkkailu painamalla kerran. Mikäli "
+#~ "navigointiobjektin tarkkailu on jo käytössä, tarkkailtava määre puhutaan. "
+#~ "Lopeta tarkkailu painamalla kahdesti."
+
+#~ msgid "Stopped watcher"
+#~ msgstr "Tarkkailu lopetettu"

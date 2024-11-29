@@ -9,41 +9,138 @@ msgstr ""
 "Project-Id-Version: objWatcher 0.4.3\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2024-05-18 10:34+0000\n"
-"PO-Revision-Date: 2024-05-24 21:43+0200\n"
+"PO-Revision-Date: 2024-11-22 21:04+0100\n"
 "Last-Translator: José Manuel Delicado <jm.delicado@nvda.es>\n"
 "Language-Team: \n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.4.4\n"
+"X-Generator: Poedit 3.5\n"
 
 #. Translators: The category name displayed in the input gesture dialog
 msgid "objWatcher"
 msgstr "objWatcher"
 
-#. Translators: Input a help message in objWatcher about
-#. starting or stopping and reporting the currently watched attributes.
-msgid ""
-"Press once to start watching the current navigator object. If a navigator "
-"object is currently being watched, the watched attribute will be reported. "
-"Press twice to stop watching."
+#. Translators: Help message when entering objWatcher layer command in input help
+msgid "Enter watcher layer commands"
+msgstr "Entrar en la capa de órdenes del vigilante"
+
+#. Translators: Message when watching has not started and no items are in the watch list
+msgid "No items are being watched. Please add items to watch."
 msgstr ""
-"Pulsa una vez para empezar a vigilar el objeto bajo el navegador de "
-"objetos. Si hay un objeto del navegador de objetos ya vigilado, se "
-"anunciará el atributo observado. Pulsa dos veces para dejar de vigilar."
+"No se está vigilando ningún elemento. Añade elementos para empezar a "
+"vigilarlos."
 
-#. Translators: Messages reported when watcher is stopped
-msgid "Stopped watcher"
-msgstr "Vigilancia detenida"
+#. Translators: Message when watching is active and items are being watched
+msgid "Watching in progress. {} items are being tracked."
+msgstr "Vigilancia en progreso. Se están observando {} elementos."
 
-#. Translators: Messages reported when watcher is started.
-msgid "Started watcher {}"
-msgstr "Vigilancia iniciada {}"
+#. Translators: Message when watching is paused and items are in the watch list
+msgid "Watching paused. {} items in the watch list."
+msgstr "Vigilancia en pausa. {} elementos en la lista de vigilancia."
 
-#. Translators: Messages reported when no navigation object available to watch.
-msgid "No navigation object available to watch"
-msgstr "No hay objeto de navegación disponible para vigilar"
+#. Translators: Message when exiting watcher layer
+msgid "Exited watcher layer"
+msgstr "Se salió de la capa del vigilante"
+
+#. Translators: Presented in input help mode.
+msgid "Add current navigator object to watchlist"
+msgstr "Añadir objeto actual a la lista de vigilancia"
+
+msgid "Invalid key: '{}'. Please use a numeric key like NVDA+Alt+0~9."
+msgstr "Teclas no válidas: '{}'. Usa teclas numéricas, como NVDA+alt+0 al 9."
+
+msgid "Position {}: {}"
+msgstr "Posición {}: {}"
+
+#. Translators: Message when there is no navigation object to add
+msgid "No navigation object available to add"
+msgstr "No hay objeto de navegación disponible para añadir"
+
+#. Translators: Message when the object is already being watched at another position
+msgid "This object is already being watched at position {}"
+msgstr "Ya se está vigilando este objeto en la posición {}"
+
+msgid "Unnamed object"
+msgstr "Objeto sin nombre"
+
+msgid "Added object to position {}: {}, Watching has not started."
+msgstr ""
+"Se ha añadido el objeto a la posición {}: {}, la vigilancia no se ha "
+"iniciado."
+
+msgid ""
+"Press once to delete the last watched object; press twice to delete all "
+"watched objects"
+msgstr ""
+"Pulsa una vez para eliminar el último objeto vigilado; pulsa dos veces para "
+"eliminar todos los objetos vigilados"
+
+#. Translators: Message when there are no objects being watched
+msgid "No objects are being watched"
+msgstr "No hay objetos bajo vigilancia"
+
+#. Translators: Message when all watched objects have been removed
+msgid "Removed all {} watched objects"
+msgstr "Se han eliminado todos los {} objetos vigilados"
+
+#. Translators: Message when no object has been checked
+msgid "No object has been checked"
+msgstr "No se ha marcado un objeto"
+
+#. Translators: Message when a watched object has been removed
+msgid "Removed {} from position {}"
+msgstr "Se ha eliminado {} de la posición {}"
+
+#. Translators: Message when the last checked object is no longer being watched
+msgid "The last checked object is no longer being watched"
+msgstr "El último objeto marcado ya no se vigila"
+
+msgid "{} is no longer available and has been removed from watch list"
+msgstr "{} ya no está disponible y se ha eliminado de la lista de vigilancia"
+
+#. Translators: Message announcing updated attributes of the object
+msgid "{}"
+msgstr "{}"
+
+#. Translators: Message when an object caused an error and has been removed
+msgid "{} caused an error and has been removed from watch list"
+msgstr "{} ha causado un error y se ha eliminado de la lista de vigilancia"
+
+msgid "Error reading attributes"
+msgstr "Error en la lectura de atributos"
+
+#. Translators: Presented in input help mode.
+msgid "Toggle the watch status of the current window"
+msgstr "Conmutar el estado de vigilancia de la ventana actual"
+
+#. Translators: Message when there is no foreground window available
+msgid "No foreground window available"
+msgstr "No hay disponible ventana en primer plano"
+
+#. Translators: Message when a window has been removed from the watch list
+msgid "Removed window {} from watch list"
+msgstr "Se ha eliminado la ventana {} de la lista de vigilancia"
+
+msgid "Unnamed window"
+msgstr "Ventana sin nombre"
+
+#. Translators: Message when a window has been added to the watch list
+msgid "Added window {} to watch list"
+msgstr "Se ha añadido la ventana {} a la lista de vigilancia"
+
+#. Translators: Presented in input help mode.
+msgid "Toggle pause/resume watching"
+msgstr "Pausar o reanudar la vigilancia"
+
+#. Translators: Message when watching is resumed
+msgid "Watching resumed"
+msgstr "Vigilancia reanudada"
+
+#. Translators: Message when watching is paused
+msgid "Watching paused"
+msgstr "Vigilancia pausada"
 
 #. Translators: This is the label for the ObjWatcher settings panel.
 msgid "ObjWatcher"

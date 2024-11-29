@@ -9,42 +9,139 @@ msgstr ""
 "Project-Id-Version: objWatcher 0.4.3\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2024-05-18 10:34+0000\n"
-"PO-Revision-Date: 2024-05-24 23:49+0200\n"
+"PO-Revision-Date: 2024-11-22 17:47+0100\n"
 "Last-Translator: Rémy Ruiz <remyruiz@gmail.com>\n"
 "Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.4.4\n"
+"X-Generator: Poedit 3.5\n"
 
 #. Translators: The category name displayed in the input gesture dialog
 msgid "objWatcher"
 msgstr "objWatcher"
 
-#. Translators: Input a help message in objWatcher about
-#. starting or stopping and reporting the currently watched attributes.
-msgid ""
-"Press once to start watching the current navigator object. If a navigator "
-"object is currently being watched, the watched attribute will be reported. "
-"Press twice to stop watching."
+#. Translators: Help message when entering objWatcher layer command in input help
+msgid "Enter watcher layer commands"
+msgstr "Entrez les commandes séquentielles de surveillance"
+
+#. Translators: Message when watching has not started and no items are in the watch list
+msgid "No items are being watched. Please add items to watch."
 msgstr ""
-"Appuyez une fois pour surveiller l'objet sous le navigateur d'objets. Si "
-"l'objet actuel dans le navigateur d'objets est déjà sous surveillance, "
-"l'attribut surveillé sera annoncé. Appuyez deux fois pour arrêter la "
+"Aucun élément n'est surveillé. Veuillez ajouter des éléments à surveiller."
+
+#. Translators: Message when watching is active and items are being watched
+msgid "Watching in progress. {} items are being tracked."
+msgstr "Surveillance en cours. {} éléments sont en cours de suivi."
+
+#. Translators: Message when watching is paused and items are in the watch list
+msgid "Watching paused. {} items in the watch list."
+msgstr ""
+"La surveillance a été mis en pause. {} éléments dans la liste de "
 "surveillance."
 
-#. Translators: Messages reported when watcher is stopped
-msgid "Stopped watcher"
-msgstr "Surveillance arrêtée"
+#. Translators: Message when exiting watcher layer
+msgid "Exited watcher layer"
+msgstr "Sortie des commandes séquentielles de surveillance"
 
-#. Translators: Messages reported when watcher is started.
-msgid "Started watcher {}"
-msgstr "Surveillance démarrée {}"
+#. Translators: Presented in input help mode.
+msgid "Add current navigator object to watchlist"
+msgstr "Ajouter l'objet navigateur actuel à la liste de surveillance"
 
-#. Translators: Messages reported when no navigation object available to watch.
-msgid "No navigation object available to watch"
-msgstr "Aucun objet de navigation disponible à surveiller"
+msgid "Invalid key: '{}'. Please use a numeric key like NVDA+Alt+0~9."
+msgstr ""
+"Touche invalide : '{}'. Veuillez utiliser une touche numérique comme "
+"NVDA+Alt+0~9."
+
+msgid "Position {}: {}"
+msgstr "Position {}: {}"
+
+#. Translators: Message when there is no navigation object to add
+msgid "No navigation object available to add"
+msgstr "Aucun objet de navigation disponible à ajouter"
+
+#. Translators: Message when the object is already being watched at another position
+msgid "This object is already being watched at position {}"
+msgstr "Cet objet est déjà surveillé à la position {}"
+
+msgid "Unnamed object"
+msgstr "Objet sans nom"
+
+msgid "Added object to position {}: {}, Watching has not started."
+msgstr "Objet ajouté à la position {} : {}, la surveillance n'a pas démarré."
+
+msgid ""
+"Press once to delete the last watched object; press twice to delete all "
+"watched objects"
+msgstr ""
+"Appuyez une fois pour supprimer le dernier objet surveillé ; appuyez deux "
+"fois pour supprimer tous les objets surveillés"
+
+#. Translators: Message when there are no objects being watched
+msgid "No objects are being watched"
+msgstr "Aucun objet n'est surveillé"
+
+#. Translators: Message when all watched objects have been removed
+msgid "Removed all {} watched objects"
+msgstr "Suppression de tous les {} objets surveillés"
+
+#. Translators: Message when no object has been checked
+msgid "No object has been checked"
+msgstr "Aucun objet n'a été coché"
+
+#. Translators: Message when a watched object has been removed
+msgid "Removed {} from position {}"
+msgstr "Supprimé {} de la position {}"
+
+#. Translators: Message when the last checked object is no longer being watched
+msgid "The last checked object is no longer being watched"
+msgstr "Le dernier objet coché n'est plus surveillé"
+
+msgid "{} is no longer available and has been removed from watch list"
+msgstr "{} n'est plus disponible et a été supprimé de la liste de surveillance"
+
+#. Translators: Message announcing updated attributes of the object
+msgid "{}"
+msgstr "{}"
+
+#. Translators: Message when an object caused an error and has been removed
+msgid "{} caused an error and has been removed from watch list"
+msgstr "{} a provoqué une erreur et a été supprimé de la liste de surveillance"
+
+msgid "Error reading attributes"
+msgstr "Erreur de lecture des attributs"
+
+#. Translators: Presented in input help mode.
+msgid "Toggle the watch status of the current window"
+msgstr "Basculer l'état de surveillance de la fenêtre actuelle"
+
+#. Translators: Message when there is no foreground window available
+msgid "No foreground window available"
+msgstr "Aucune fenêtre  en premier plan disponible"
+
+#. Translators: Message when a window has been removed from the watch list
+msgid "Removed window {} from watch list"
+msgstr "Fenêtre {} supprimée de la liste de surveillance"
+
+msgid "Unnamed window"
+msgstr "Fenêtre sans nom"
+
+#. Translators: Message when a window has been added to the watch list
+msgid "Added window {} to watch list"
+msgstr "Fenêtre {} ajoutée à la liste de surveillance"
+
+#. Translators: Presented in input help mode.
+msgid "Toggle pause/resume watching"
+msgstr "Basculer mettre en pause/reprendre la surveillance"
+
+#. Translators: Message when watching is resumed
+msgid "Watching resumed"
+msgstr "La surveillance a repris"
+
+#. Translators: Message when watching is paused
+msgid "Watching paused"
+msgstr "La surveillance a été mis en pause"
 
 #. Translators: This is the label for the ObjWatcher settings panel.
 msgid "ObjWatcher"
@@ -67,3 +164,16 @@ msgid "This NVDA add-on watches changes to attributes of navigation objects."
 msgstr ""
 "Cette extension pour NVDA surveille les modifications apportées aux "
 "attributs des objets de navigation."
+
+#~ msgid ""
+#~ "Press once to start watching the current navigator object. If a navigator "
+#~ "object is currently being watched, the watched attribute will be "
+#~ "reported. Press twice to stop watching."
+#~ msgstr ""
+#~ "Appuyez une fois pour surveiller l'objet sous le navigateur d'objets. Si "
+#~ "l'objet actuel dans le navigateur d'objets est déjà sous surveillance, "
+#~ "l'attribut surveillé sera annoncé. Appuyez deux fois pour arrêter la "
+#~ "surveillance."
+
+#~ msgid "Stopped watcher"
+#~ msgstr "Surveillance arrêtée"
