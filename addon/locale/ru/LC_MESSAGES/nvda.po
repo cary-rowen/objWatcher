@@ -9,42 +9,138 @@ msgstr ""
 "Project-Id-Version: objWatcher 0.4.3\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2024-05-18 10:34+0000\n"
-"PO-Revision-Date: 2024-08-12 13:34+0500\n"
+"PO-Revision-Date: 2025-01-02 14:54+0500\n"
 "Last-Translator: Ruslan Kolodyazhni <rupelodn@gmail.com>\n"
 "Language-Team: Translators <nvda-translations@groups.io>\n"
 "Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.4.4\n"
+"X-Generator: Poedit 3.5\n"
 
 #. Translators: The category name displayed in the input gesture dialog
 msgid "objWatcher"
 msgstr "просмотрщик объектов"
 
-#. Translators: Input a help message in objWatcher about
-#. starting or stopping and reporting the currently watched attributes.
-msgid ""
-"Press once to start watching the current navigator object. If a navigator "
-"object is currently being watched, the watched attribute will be reported. "
-"Press twice to stop watching."
+#. Translators: Help message when entering objWatcher layer command in input help
+msgid "Enter watcher layer commands"
+msgstr "Введите команды уровня просмотра"
+
+#. Translators: Message when watching has not started and no items are in the watch list
+msgid "No items are being watched. Please add items to watch."
 msgstr ""
-"Однократное нажатие начинает просмотр текущего объекта навигатора. Если в "
-"данный момент просматривается другой объект навигатора, будет отображён "
-"атрибут, за которым ведётся наблюдение. Двойное нажатие прекращает "
-"просмотр."
+"Ни один объект не просматривается. Пожалуйста, добавьте элементы для "
+"просмотра."
 
-#. Translators: Messages reported when watcher is stopped
-msgid "Stopped watcher"
-msgstr "Просмотр остановлен"
+#. Translators: Message when watching is active and items are being watched
+msgid "Watching in progress. {} items are being tracked."
+msgstr "Идёт просмотр. Отслеживается {} элементов."
 
-#. Translators: Messages reported when watcher is started.
-msgid "Started watcher {}"
-msgstr "Просмотр запущен {}"
+#. Translators: Message when watching is paused and items are in the watch list
+msgid "Watching paused. {} items in the watch list."
+msgstr "Просмотр приостановлен. {} элементов в списке наблюдения."
 
-#. Translators: Messages reported when no navigation object available to watch.
-msgid "No navigation object available to watch"
-msgstr "Нет доступных объектов навигатора для просмотра"
+#. Translators: Message when exiting watcher layer
+msgid "Exited watcher layer"
+msgstr "Выход из уровня просмотрщика"
+
+#. Translators: Presented in input help mode.
+msgid "Add current navigator object to watchlist"
+msgstr "Добавить текущий объект навигатора в список просмотра"
+
+msgid "Invalid key: '{}'. Please use a numeric key like NVDA+Alt+0~9."
+msgstr ""
+"Неправильная клавиша: '{}'. Используйте цифровую клавишу, например "
+"NVDA+Alt+0~9."
+
+msgid "Position {}: {}"
+msgstr "Положение {}: {}"
+
+#. Translators: Message when there is no navigation object to add
+msgid "No navigation object available to add"
+msgstr "Нет доступных объектов навигатора для добавления"
+
+#. Translators: Message when the object is already being watched at another position
+msgid "This object is already being watched at position {}"
+msgstr "Этот объект уже наблюдается в положении {}"
+
+msgid "Unnamed object"
+msgstr "Безымянный объект"
+
+msgid "Added object to position {}: {}, Watching has not started."
+msgstr "Добавлен объект в положение {}: {}, Просмотр не начался."
+
+msgid ""
+"Press once to delete the last watched object; press twice to delete all "
+"watched objects"
+msgstr ""
+"Нажмите один раз, чтобы удалить последний просматриваемый объект; нажмите "
+"дважды, чтобы удалить все наблюдаемые объекты"
+
+#. Translators: Message when there are no objects being watched
+msgid "No objects are being watched"
+msgstr "Ни один объект не отслеживается"
+
+#. Translators: Message when all watched objects have been removed
+msgid "Removed all {} watched objects"
+msgstr "Удалены все {} наблюдаемые объекты"
+
+#. Translators: Message when no object has been checked
+msgid "No object has been checked"
+msgstr "Ни один объект не отмечен"
+
+#. Translators: Message when a watched object has been removed
+msgid "Removed {} from position {}"
+msgstr "Удалён {} из положения {}"
+
+#. Translators: Message when the last checked object is no longer being watched
+msgid "The last checked object is no longer being watched"
+msgstr "Последний отмеченный объект больше не просматривается"
+
+msgid "{} is no longer available and has been removed from watch list"
+msgstr "{} больше недоступен и удалён из списка просмотра"
+
+#. Translators: Message announcing updated attributes of the object
+msgid "{}"
+msgstr "{}"
+
+#. Translators: Message when an object caused an error and has been removed
+msgid "{} caused an error and has been removed from watch list"
+msgstr "{} вызвало ошибку и было удалено из списка наблюдения"
+
+msgid "Error reading attributes"
+msgstr "Ошибка чтения атрибутов"
+
+#. Translators: Presented in input help mode.
+msgid "Toggle the watch status of the current window"
+msgstr "Переключить состояние просмотра текущего окна"
+
+#. Translators: Message when there is no foreground window available
+msgid "No foreground window available"
+msgstr "Окно на переднем плане недоступно"
+
+#. Translators: Message when a window has been removed from the watch list
+msgid "Removed window {} from watch list"
+msgstr "Окно {} удалено из списка наблюдения"
+
+msgid "Unnamed window"
+msgstr "Безымянное окно"
+
+#. Translators: Message when a window has been added to the watch list
+msgid "Added window {} to watch list"
+msgstr "Добавлено окно {} в список просмотра"
+
+#. Translators: Presented in input help mode.
+msgid "Toggle pause/resume watching"
+msgstr "Переключить паузу/возобновление просмотра"
+
+#. Translators: Message when watching is resumed
+msgid "Watching resumed"
+msgstr "Просмотр возобновлён"
+
+#. Translators: Message when watching is paused
+msgid "Watching paused"
+msgstr "Просмотр приостановлен"
 
 #. Translators: This is the label for the ObjWatcher settings panel.
 msgid "ObjWatcher"
