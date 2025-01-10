@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the objWatcher package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Josevan Barbosa Fernandes <josevanfernandes@yahoo.com.br>, 2024-2025.
 #
 #, fuzzy
 msgid ""
@@ -9,16 +9,15 @@ msgstr ""
 "Project-Id-Version: objWatcher 0.4.3\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2024-05-18 10:34+0000\n"
-"PO-Revision-Date: 2025-01-04 22:14+0000\n"
-"Last-Translator: Ângelo Abrantes <ampa4374@gmail.com>\n"
-"Language-Team: Equipa portuguesa do NVDA: Ângelo Abrantes e Rui Fontes "
-"(23-05-2024)\n"
-"Language: pt_PT\n"
+"PO-Revision-Date: 2025-01-05 21:15-0300\n"
+"Last-Translator: Josevan Fernandes <josevanfernandes@yahoo.com.br>\n"
+"Language-Team: NVDA Brazilian Portuguese translation team (Equipe de "
+"tradução do NVDA para Português Brasileiro) <clever97@gmail.com>\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.5\n"
-"X-Poedit-SourceCharset: UTF-8\n"
 
 #. Translators: The category name displayed in the input gesture dialog
 msgid "objWatcher"
@@ -26,21 +25,21 @@ msgstr "objWatcher"
 
 #. Translators: Help message when entering objWatcher layer command in input help
 msgid "Enter watcher layer commands"
-msgstr "Introduzir comandos da camada observadora"
+msgstr "Inserir comandos da camada do observador"
 
 #. Translators: Message when watching has not started and no items are in the watch list
 msgid "No items are being watched. Please add items to watch."
 msgstr ""
-"Nenhum item está a ser observado. Por favor, adicione itens a serem "
+"Nenhum item está sendo observado. Por favor, adicione itens para serem "
 "observados."
 
 #. Translators: Message when watching is active and items are being watched
 msgid "Watching in progress. {} items are being tracked."
-msgstr "A observar em curso. estão a ser monitorizados {} itens."
+msgstr "Observação em andamento. {} itens estão sendo rastreados."
 
 #. Translators: Message when watching is paused and items are in the watch list
 msgid "Watching paused. {} items in the watch list."
-msgstr "A observação foi interrompida. {} itens na lista de observação."
+msgstr "Observação pausada. {} itens na lista de observação."
 
 #. Translators: Message when exiting watcher layer
 msgid "Exited watcher layer"
@@ -51,7 +50,7 @@ msgid "Add current navigator object to watchlist"
 msgstr "Adicionar o objeto do navegador atual à lista de observação"
 
 msgid "Invalid key: '{}'. Please use a numeric key like NVDA+Alt+0~9."
-msgstr "Tecla inválida: '{}'. Utilize uma tecla numérica como NVDA+Alt+0~9."
+msgstr "Tecla inválida: '{}'. Use uma tecla numérica como NVDA+Alt+0~9."
 
 msgid "Position {}: {}"
 msgstr "Posição {}: {}"
@@ -62,28 +61,28 @@ msgstr "Nenhum objeto de navegação disponível para adicionar"
 
 #. Translators: Message when the object is already being watched at another position
 msgid "This object is already being watched at position {}"
-msgstr "Este objeto já está a ser observado na posição {}"
+msgstr "Este objeto já está sendo observado na posição {}"
 
 msgid "Unnamed object"
 msgstr "Objeto sem nome"
 
 msgid "Added object to position {}: {}, Watching has not started."
-msgstr "Objeto adicionado à posição {}: {}, A observação não foi iniciada."
+msgstr "Objeto adicionado à posição {}: {}, a observação não foi iniciada."
 
 msgid ""
 "Press once to delete the last watched object; press twice to delete all "
 "watched objects"
 msgstr ""
-"Prima uma vez para apagar o último objeto observado; prima duas vezes para "
-"apagar todos os objectos observados"
+"Pressione uma vez para excluir o último objeto observado; pressione duas "
+"vezes para excluir todos os objetos observados"
 
 #. Translators: Message when there are no objects being watched
 msgid "No objects are being watched"
-msgstr "Nenhum objeto está a ser observado"
+msgstr "Nenhum objeto está sendo observado"
 
 #. Translators: Message when all watched objects have been removed
 msgid "Removed all {} watched objects"
-msgstr "Removidos todos os objectos {} vigiados"
+msgstr "Removidos todos os objetos {} monitorados"
 
 #. Translators: Message when no object has been checked
 msgid "No object has been checked"
@@ -95,10 +94,10 @@ msgstr "Removido {} da posição {}"
 
 #. Translators: Message when the last checked object is no longer being watched
 msgid "The last checked object is no longer being watched"
-msgstr "O último objeto verificado já não está a ser observado"
+msgstr "O último objeto verificado não está mais sendo observado"
 
 msgid "{} is no longer available and has been removed from watch list"
-msgstr "{} já não está disponível e foi removido da lista de observação"
+msgstr "{} não está mais disponível e foi removido da lista de observação"
 
 #. Translators: Message announcing updated attributes of the object
 msgid "{}"
@@ -109,11 +108,11 @@ msgid "{} caused an error and has been removed from watch list"
 msgstr "{} causou um erro e foi removido da lista de observação"
 
 msgid "Error reading attributes"
-msgstr "Erro na leitura de atributos"
+msgstr "Erro ao ler atributos"
 
 #. Translators: Presented in input help mode.
 msgid "Toggle the watch status of the current window"
-msgstr "Alternar o estado de observação da janela atual"
+msgstr "Alternar o status de observação da janela atual"
 
 #. Translators: Message when there is no foreground window available
 msgid "No foreground window available"
@@ -121,7 +120,7 @@ msgstr "Não há janela de primeiro plano disponível"
 
 #. Translators: Message when a window has been removed from the watch list
 msgid "Removed window {} from watch list"
-msgstr "Removida a janela {} da lista de observação"
+msgstr "Remoção da janela {} da lista de observação"
 
 msgid "Unnamed window"
 msgstr "Janela sem nome"
@@ -132,7 +131,7 @@ msgstr "Adicionada a janela {} à lista de observação"
 
 #. Translators: Presented in input help mode.
 msgid "Toggle pause/resume watching"
-msgstr "Alternar pausa/retomar a visualização"
+msgstr "Alternar a observação de pausa/retomada"
 
 #. Translators: Message when watching is resumed
 msgid "Watching resumed"
@@ -149,29 +148,17 @@ msgstr "ObjWatcher"
 #. Translators: This is the label of a SpinCtrl in the ObjWatcher settings panel
 #. This option controls the interval of the Watcher timer (in milliseconds)
 msgid "Watcher timer interval"
-msgstr "Intervalo de tempo do visualizador"
+msgstr "Intervalo do cronômetro do observador"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
 #. to be shown on installation and add-on information found in Add-ons Manager.
 msgid "obj Watcher"
-msgstr "Visualizador de obj"
+msgstr "obj Observador"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "This NVDA add-on watches changes to attributes of navigation objects."
 msgstr ""
-"Este extra do NVDA observa as alterações aos atributos dos objectos de "
-"navegação."
-
-#~ msgid ""
-#~ "Press once to start watching the current navigator object. If a navigator "
-#~ "object is currently being watched, the watched attribute will be "
-#~ "reported. Press twice to stop watching."
-#~ msgstr ""
-#~ "Prima uma vez para começar a observar o objeto do navegador atual. Se um "
-#~ "objeto do navegador estiver a ser observado, o atributo observado será "
-#~ "indicado. Prima duas vezes para parar a observação."
-
-#~ msgid "Stopped watcher"
-#~ msgstr "Observador parado"
+"Esse complemento do NVDA observa as alterações nos atributos dos objetos "
+"de navegação."
