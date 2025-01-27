@@ -1,1 +1,1 @@
-Fixed document Markdown rendering issue.
+L10n updates.
