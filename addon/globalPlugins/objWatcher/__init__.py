@@ -185,13 +185,15 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				return
 
 		# Add new object
-		self.watchingObjs.append({
-			"obj": obj,
-			"lastText": None,
-			"name": obj.name or _("Unnamed object"),
-			"addTime": time.time(),
-			"number": number,
-		})
+		self.watchingObjs.append(
+			{
+				"obj": obj,
+				"lastText": None,
+				"name": obj.name or _("Unnamed object"),
+				"addTime": time.time(),
+				"number": number,
+			}
+		)
 
 		# Start the timer if not paused and not already running
 		if not self.watchingPaused and not self.timer.IsRunning():
@@ -366,13 +368,15 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				return
 
 		# Add the object to the watch list
-		self.watchingObjs.append({
-			"obj": obj,
-			"lastText": None,
-			"name": obj.name or _("Unnamed window"),
-			"addTime": time.time(),
-			"number": None,  # Special objects do not use number positions
-		})
+		self.watchingObjs.append(
+			{
+				"obj": obj,
+				"lastText": None,
+				"name": obj.name or _("Unnamed window"),
+				"addTime": time.time(),
+				"number": None,  # Special objects do not use number positions
+			}
+		)
 
 		# Start the timer if not paused and not already running
 		if not self.watchingPaused and not self.timer.IsRunning():
