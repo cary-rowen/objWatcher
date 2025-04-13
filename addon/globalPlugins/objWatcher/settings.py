@@ -57,11 +57,23 @@ class ObjWatcherPanel(gui.settingsDialogs.SettingsPanel):
 
 		attrLst: wx.ListCtrl = self.watchAttributesList.GetListCtrl()
 		attrLst.MoveBeforeInTabOrder(editBtn.GetParent())
+		attrLst.Bind(wx.EVT_LIST_BEGIN_LABEL_EDIT, self.onBeginEditingForListCtrl)
 		attrLst.SetLabel(watchAttributesLabelText)
 		attrLst.EnableCheckBoxes(True)
 		attrLst.Select(0)
 
 		settingsSizerHelper.addItem(self.watchAttributesList)
+
+	def onIgnoreDialogCharHookEvent(self, evt: wx.KeyEvent):
+		evt.DoAllowNextEvent()
+
+	def onBeginEditingForListCtrl(self, evt: wx.ListEvent):
+		evtObj: wx.ListCtrl = evt.GetEventObject()
+		editCtrl = evtObj.GetEditControl()
+		if isinstance(editCtrl, wx.TextCtrl):
+			editCtrl.Bind(wx.EVT_CHAR_HOOK, handler=self.onIgnoreDialogCharHookEvent)
+		else:
+			evt.Skip()
 
 	def onSave(self):
 		config.conf["objWatcher"]["interval"] = self.intervalEdit.Value
