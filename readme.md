@@ -67,6 +67,9 @@ Access the settings panel from NVDA’s Preferences menu to configure the follow
 2. Report bugs or provide feedback through the [GitHub Issues page][GitHubIssue].
 
 ## Release Notes
+### Version 1.0.4
+- Compatible with NVDA2025.1
+
 ### Version 1.0.3
 - L10n updates from translation system.
 
