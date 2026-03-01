@@ -2,49 +2,169 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2023-09-27 09:47+0300\n"
-"PO-Revision-Date: 2023-10-01 13:03+0300\n"
+"POT-Creation-Date: 2025-08-11 10:35+0300\n"
+"PO-Revision-Date: 2025-08-11 10:51+0300\n"
 "Last-Translator: Heorhii <nvda.translation.uk@gmail.com>\n"
 "Language-Team: \n"
 "Language: uk_UA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.6\n"
 "X-Poedit-Basepath: .\n"
 
 #. Translators: The category name displayed in the input gesture dialog
-#: addon\globalPlugins\objWatcher\__init__.py:29
+#: addon\globalPlugins\objWatcher\__init__.py:53
 msgid "objWatcher"
 msgstr "спостерігач за об’єктами"
 
-#. Translators: Input a help message in objWatcher about
-#. starting or stopping and reporting the currently watched attributes.
-#: addon\globalPlugins\objWatcher\__init__.py:48
-msgid ""
-"Press once to start watching the current navigator object. If a navigator "
-"object is currently being watched, the watched attribute will be reported. "
-"Press twice to stop watching."
+#. Translators: Help message when entering objWatcher layer command in input help
+#: addon\globalPlugins\objWatcher\__init__.py:100
+msgid "Enter watcher layer commands"
+msgstr "Введіть команди шару спостерігача"
+
+#. Translators: Message when watching has not started and no items are in the watch list
+#: addon\globalPlugins\objWatcher\__init__.py:112
+msgid "No items are being watched. Please add items to watch."
+msgstr "Немає відстежуваних елементів. Додайте елементи для відстеження."
+
+#. Translators: Message when watching is active and items are being watched
+#: addon\globalPlugins\objWatcher\__init__.py:115
+msgid "Watching in progress. {} items are being tracked."
+msgstr "Перегляд триває. Відстежується {} елементів."
+
+#. Translators: Message when watching is paused and items are in the watch list
+#: addon\globalPlugins\objWatcher\__init__.py:118
+msgid "Watching paused. {} items in the watch list."
+msgstr "Перегляд призупинено. {} елементів у списку перегляду."
+
+#. Translators: Message when exiting watcher layer
+#: addon\globalPlugins\objWatcher\__init__.py:128
+msgid "Exited watcher layer"
+msgstr "Вихід з шару спостерігача"
+
+#. Translators: Presented in input help mode.
+#: addon\globalPlugins\objWatcher\__init__.py:132
+msgid "Add current navigator object to watchlist"
+msgstr "Додати поточний об'єкт навігатора до списку"
+
+#: addon\globalPlugins\objWatcher\__init__.py:143
+msgid "Invalid key: '{}'. Please use a numeric key like NVDA+Alt+0~9."
 msgstr ""
-"Натисніть один раз, щоб почати спостереження за поточним об’єкта "
-"навігатора. Якщо об’єкт навігатора в цей час спостерігається, буде "
-"повідомлено про спостережуваний атрибут. Натисніть двічі, щоб припинити "
-"спостереження."
+"Недійсний ключ: '{}'. Будь ласка, використовуйте числовий ключ, наприклад "
+"NVDA+Alt+0~9."
 
-#. Translators: Messages reported when watcher is stopped
-#: addon\globalPlugins\objWatcher\__init__.py:78
-msgid "Stopped watcher"
-msgstr "Спостереження зупинено"
+#: addon\globalPlugins\objWatcher\__init__.py:154
+msgid "Position {}: {}"
+msgstr "Позиція {}: {}"
 
-#. Translators: Messages reported when watcher is started.
-#: addon\globalPlugins\objWatcher\__init__.py:85
-msgid "Started watcher {}"
-msgstr "Спостереження розпочато {}"
+#. Translators: Message when there is no navigation object to add
+#: addon\globalPlugins\objWatcher\__init__.py:174
+msgid "No navigation object available to add"
+msgstr "Немає об'єкта навігації, який можна додати"
 
-#. Translators: Messages reported when no navigation object available to watch.
-#: addon\globalPlugins\objWatcher\__init__.py:90
-msgid "No navigation object available to watch"
-msgstr "Немає об’єктів навігації, доступних для перегляду"
+#. Translators: Message when the object is already being watched at another position
+#: addon\globalPlugins\objWatcher\__init__.py:183
+msgid "This object is already being watched at position {}"
+msgstr "Цей об'єкт вже спостерігається в позиції {}"
+
+#: addon\globalPlugins\objWatcher\__init__.py:192
+msgid "Unnamed object"
+msgstr "Неназваний об’єкт"
+
+#: addon\globalPlugins\objWatcher\__init__.py:205
+msgid "Added object to position {}: {}, Watching has not started."
+msgstr "Об’єкт додано в позицію {}: {}, спостереження не розпочато."
+
+#: addon\globalPlugins\objWatcher\__init__.py:228
+msgid ""
+"Press once to delete the last watched object; press twice to delete all "
+"watched objects"
+msgstr ""
+"Натисніть один раз, щоб видалити останній переглянутий об’єкт; натисніть "
+"двічі, щоб видалити всі переглянуті об’єкти"
+
+#. Translators: Message when there are no objects being watched
+#: addon\globalPlugins\objWatcher\__init__.py:245
+msgid "No objects are being watched"
+msgstr "Жодні об’єкти не відстежуються"
+
+#. Translators: Message when all watched objects have been removed
+#: addon\globalPlugins\objWatcher\__init__.py:256
+msgid "Removed all {} watched objects"
+msgstr "Видалено всі {} переглянуті об'єкти"
+
+#. Translators: Message when no object has been checked
+#: addon\globalPlugins\objWatcher\__init__.py:262
+msgid "No object has been checked"
+msgstr "Жоден об'єкт не перевірено"
+
+#. Translators: Message when a watched object has been removed
+#: addon\globalPlugins\objWatcher\__init__.py:272
+msgid "Removed {} from position {}"
+msgstr "Видалено {} з позиції {}"
+
+#. Translators: Message when the last checked object is no longer being watched
+#: addon\globalPlugins\objWatcher\__init__.py:282
+msgid "The last checked object is no longer being watched"
+msgstr "Останній перевірений об'єкт більше не відстежується"
+
+#: addon\globalPlugins\objWatcher\__init__.py:303
+msgid "{} is no longer available and has been removed from watch list"
+msgstr "{} більше недоступний і був видалений зі списку спостереження."
+
+#. Translators: Message announcing updated attributes of the object
+#: addon\globalPlugins\objWatcher\__init__.py:311
+msgid "{}"
+msgstr "{}"
+
+#. Translators: Message when an object caused an error and has been removed
+#: addon\globalPlugins\objWatcher\__init__.py:317
+msgid "{} caused an error and has been removed from watch list"
+msgstr "{} спричинив помилку і був видалений зі списку спостереження."
+
+#: addon\globalPlugins\objWatcher\__init__.py:337
+msgid "Error reading attributes"
+msgstr "Помилка читання атрибутів"
+
+#. Translators: Presented in input help mode.
+#: addon\globalPlugins\objWatcher\__init__.py:350
+msgid "Toggle the watch status of the current window"
+msgstr "Перемкнути стеження за поточним вікном"
+
+#. Translators: Message when there is no foreground window available
+#: addon\globalPlugins\objWatcher\__init__.py:356
+msgid "No foreground window available"
+msgstr "Немає доступного вікна на передньому плані"
+
+#. Translators: Message when a window has been removed from the watch list
+#: addon\globalPlugins\objWatcher\__init__.py:365
+msgid "Removed window {} from watch list"
+msgstr "Вікно {} вилучено зі списку спостереження."
+
+#: addon\globalPlugins\objWatcher\__init__.py:375
+msgid "Unnamed window"
+msgstr "Вікно без назви"
+
+#. Translators: Message when a window has been added to the watch list
+#: addon\globalPlugins\objWatcher\__init__.py:386
+msgid "Added window {} to watch list"
+msgstr "Вікно {} додано до списку спостереження."
+
+#. Translators: Presented in input help mode.
+#: addon\globalPlugins\objWatcher\__init__.py:390
+msgid "Toggle pause/resume watching"
+msgstr "Перемкнути паузу перегляду"
+
+#. Translators: Message when watching is resumed
+#: addon\globalPlugins\objWatcher\__init__.py:396
+msgid "Watching resumed"
+msgstr "Перегляд відновлено"
+
+#. Translators: Message when watching is paused
+#: addon\globalPlugins\objWatcher\__init__.py:404
+msgid "Watching paused"
+msgstr "Перегляд призупинено"
 
 #. Translators: This is the label for the ObjWatcher settings panel.
 #: addon\globalPlugins\objWatcher\settings.py:17
@@ -70,3 +190,16 @@ msgstr "спостерігач за об’єктами"
 msgid "This NVDA add-on watches changes to attributes of navigation objects."
 msgstr ""
 "Цей додаток для NVDA стежить за змінами в атрибутах об’єктів навігації."
+
+#~ msgid ""
+#~ "Press once to start watching the current navigator object. If a navigator "
+#~ "object is currently being watched, the watched attribute will be "
+#~ "reported. Press twice to stop watching."
+#~ msgstr ""
+#~ "Натисніть один раз, щоб почати спостереження за поточним об’єкта "
+#~ "навігатора. Якщо об’єкт навігатора в цей час спостерігається, буде "
+#~ "повідомлено про спостережуваний атрибут. Натисніть двічі, щоб припинити "
+#~ "спостереження."
+
+#~ msgid "Stopped watcher"
+#~ msgstr "Спостереження зупинено"
