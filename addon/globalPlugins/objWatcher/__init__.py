@@ -140,7 +140,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			log.warning(f"Invalid key detected: '{invalid_key}'.")
 			# Translators: Message to the user when an invalid gesture is detected
 			ui.message(
-				_("Invalid key: '{}'. Please use a numeric key like NVDA+Alt+0~9.").format(invalid_key)
+				_("Invalid key: '{}'. Please use a numeric key like NVDA+Alt+0~9.").format(invalid_key),
 			)
 			return
 
@@ -158,12 +158,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 						if data["name"] == (data["lastText"] or self._getWatchingAttribute(data["obj"]))
 						# If name and lastText are different, report both name and lastText
 						else "{} - {}".format(
-							data["name"], data["lastText"] or self._getWatchingAttribute(data["obj"])
+							data["name"],
+							data["lastText"] or self._getWatchingAttribute(data["obj"]),
 						)
 						if data["name"]
 						# If name is empty, only report lastText or fallback to _getWatchingAttribute
 						else data["lastText"] or self._getWatchingAttribute(data["obj"]),
-					)
+					),
 				)
 				return
 
@@ -192,7 +193,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				"name": obj.name or _("Unnamed object"),
 				"addTime": time.time(),
 				"number": number,
-			}
+			},
 		)
 
 		# Start the timer if not paused and not already running
@@ -203,8 +204,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# Translators: Message when an object is added to the watch list and watching not started
 			ui.message(
 				_("Added object to position {}: {}, Watching has not started.").format(
-					number, self.watchingObjs[-1]["name"]
-				)
+					number,
+					self.watchingObjs[-1]["name"],
+				),
 			)
 		cues.Start()
 		self.finish()  # Exit layer mode after adding the object
@@ -225,7 +227,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	@script(
 		# Translators: Presented in input help mode.
 		description=_(
-			"Press once to delete the last watched object; press twice to delete all watched objects"
+			"Press once to delete the last watched object; press twice to delete all watched objects",
 		),
 	)
 	def script_DeleteLastChecked(self, gesture):
@@ -300,7 +302,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 					self.watchingObjs.remove(data)
 					# Translators: Message when an object is no longer available and has been removed
 					ui.message(
-						_("{} is no longer available and has been removed from watch list").format(name)
+						_("{} is no longer available and has been removed from watch list").format(name),
 					)
 					continue
 
@@ -375,7 +377,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				"name": obj.name or _("Unnamed window"),
 				"addTime": time.time(),
 				"number": None,  # Special objects do not use number positions
-			}
+			},
 		)
 
 		# Start the timer if not paused and not already running

@@ -64,4 +64,3 @@ interromper a observação.
 
 [GitHub]: https://github.com/cary-rowen/objWatcher [GitHubIssue]:
 https://github.com/cary-rowen/objWatcher/issues
-

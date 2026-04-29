@@ -24,8 +24,9 @@ class ObjWatcherPanel(gui.settingsDialogs.SettingsPanel):
 		self.intervalEdit = settingsSizerHelper.addLabeledControl(
 			intervalLabelText,
 			nvdaControls.SelectOnFocusSpinCtrl,
-			min=10, max=500,
-			initial=int(config.conf["objWatcher"]["interval"])
+			min=10,
+			max=500,
+			initial=int(config.conf["objWatcher"]["interval"]),
 		)
 
 	def onSave(self):
