@@ -64,4 +64,3 @@ ilmoitetaan. Lopeta tarkkailu painamalla kahdesti.
 
 [GitHub]: https://github.com/cary-rowen/objWatcher [GitHubIssue]:
 https://github.com/cary-rowen/objWatcher/issues
-

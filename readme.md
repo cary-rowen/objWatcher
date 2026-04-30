@@ -55,7 +55,7 @@ Access the settings panel from NVDA’s Preferences menu to configure the follow
   - hwf1324: Code contributor
   - Ibrahim Hamadeh: Code contributor
 
-- **Localization Contributors:**  
+- **Localization Contributors:**
   - Ibrahim Hamadeh: Arabic Translation
   - VovaMobile: Ukrainian Translation
 

@@ -15,5 +15,5 @@ def NoObj():
 
 
 def play_sound(filename):
-	path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'sounds', filename))
+	path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "sounds", filename))
 	return playWaveFile(path + ".wav")

@@ -63,4 +63,3 @@ raporlanacaktır. İzlemeyi durdurmak için iki kez basın.
 
 [GitHub]: https://github.com/cary-rowen/objWatcher [GitHubIssue]:
 https://github.com/cary-rowen/objWatcher/issues
-
