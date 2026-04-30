@@ -23,12 +23,12 @@ addon_info = AddonInfo(
 	# Translators: Long description to be shown for this add-on on add-on information from add-on store
 	addon_description=_("""This NVDA add-on watches changes to attributes of navigation objects."""),
 	# version
-	addon_version="1.0.6",
+	addon_version="1.0.7",
 	# Brief changelog for this version
 	# Translators: what's new content for the add-on version to be shown in the add-on store
-	addon_changelog=_("""### 1.0.6
+	addon_changelog=_("""### 1.0.7
 
-Bump version, compatible with NVDA 2026.1.0."""),
+Update template"""),
 	# Author(s)
 	addon_author="Cary-rowen <manchen_0528@outlook.com>, hwf1324 <1398969445@qq.com>",
 	# URL for the add-on documentation support
