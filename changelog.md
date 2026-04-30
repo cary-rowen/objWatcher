@@ -1,1 +1,7 @@
-Use this file to explain what has changed in your add-on since the previous release. This will be included automatically in the release description when used with GitHub actions.
+### 1.0.6
+
+Bump version, compatible with NVDA 2026.1.0.
+
+### 1.0.5
+
+Bump version.
